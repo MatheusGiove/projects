@@ -12,30 +12,34 @@
 }
 
 .nome h1 {
-   font-size: 3rem;
+   font-size: 5vw;
 }
 
 .nome h2 {
-   font-size: 1.75rem;
+   font-size: 2.2rem;
    color: var(--cor2);
+}
+
+.nome h3 {
+   font-size: 1.8vw;
 }
 
 .foto {
    display: grid;
-   place-self: center;
+   place-self: center end;
    position: relative;
 }
 
-.nome h1::before {
+/* .nome h1::before {
    content: '';
-   width: 501px;
-   height: 504px;
+   width: ;
+   height: 100%;
    top: 130px;
    right: 5px;
    display: block;
    position: absolute;
    background: url(./conteudo/detalhe-foto.svg) no-repeat;
-}
+} */
 
 @media (max-width: 1000px) {
    .apresentacao {
@@ -54,6 +58,19 @@
    }
 
    .foto {
-      width: 70%;
+      width: 75%;
+      display: block;
+      place-self: center
+      ;
+   }
+
+   .nome h1 {
+      font-size: 3rem;
+   }
+   .nome h2 {
+      font-size: 1.5rem;
+   }
+   .nome h3 {
+      font-size: 1rem;
    }
 }
