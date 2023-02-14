@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 5vw;
+  background-image: linear-gradient(0deg, var(--cor2), var(--cor0));
+}
+
+.header-menu {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.item-menu {
+  display: flex;
+  text-decoration: none;
+  color: var(--cor3);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.item-menu:hover {
+   color: #B98EFF;
+}
+
+@media (max-width: 1000px) {
+   .header {
+      flex-direction: column;
+      gap: 1.25rem;
+      padding: 1.25rem 5vw;
+   }
+   
+   .item-menu {
+      background-color: var(--cor2);
+   }
+}

@@ -1,0 +1,59 @@
+.apresentacao {
+   display: grid;
+   grid-template-columns: 2fr 1fr;
+   padding: 2.5rem 5vw;
+
+}
+
+.nome {
+   display: grid;
+   align-content: center;
+   justify-content: left;
+}
+
+.nome h1 {
+   font-size: 3rem;
+}
+
+.nome h2 {
+   font-size: 1.75rem;
+   color: var(--cor2);
+}
+
+.foto {
+   display: grid;
+   place-self: center;
+   position: relative;
+}
+
+.nome h1::before {
+   content: '';
+   width: 501px;
+   height: 504px;
+   top: 130px;
+   right: 5px;
+   display: block;
+   position: absolute;
+   background: url(./conteudo/detalhe-foto.svg) no-repeat;
+}
+
+@media (max-width: 1000px) {
+   .apresentacao {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+   }
+   
+   .nome {
+      justify-content: center;
+      text-align: center;
+   }
+
+   .nome h1::before {
+      display: none;
+   }
+
+   .foto {
+      width: 50%;
+   }
+}
