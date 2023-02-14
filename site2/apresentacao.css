@@ -2,7 +2,9 @@
    display: grid;
    grid-template-columns: 2fr 1fr;
    padding: 2.5rem 5vw;
-
+   background-image: url(./conteudo/Rectangle\ 23.svg);
+   background-repeat: no-repeat;
+   background-size: auto 40vw;
 }
 
 .nome {
@@ -29,17 +31,6 @@
    place-self: center end;
    position: relative;
 }
-
-/* .nome h1::before {
-   content: '';
-   width: ;
-   height: 100%;
-   top: 130px;
-   right: 5px;
-   display: block;
-   position: absolute;
-   background: url(./conteudo/detalhe-foto.svg) no-repeat;
-} */
 
 @media (max-width: 1000px) {
    .apresentacao {
@@ -72,5 +63,11 @@
    }
    .nome h3 {
       font-size: 1rem;
+   }
+
+   .apresentacao {
+      background-image: url(./conteudo/Rectangle\ 23.svg);
+      background-repeat: no-repeat;
+      background-size: auto;
    }
 }
