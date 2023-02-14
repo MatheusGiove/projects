@@ -2,9 +2,10 @@
    display: grid;
    grid-template-columns: 2fr 1fr;
    padding: 2.5rem 5vw;
-   background-image: url(./conteudo/Rectangle\ 23.svg);
+   /* background-image: url(./conteudo/Rectangle\ 23.svg);
    background-repeat: no-repeat;
-   background-size: auto 40vw;
+   background-size: 70vw;
+   background-position: scroll; */
 }
 
 .nome {
@@ -66,8 +67,6 @@
    }
 
    .apresentacao {
-      background-image: url(./conteudo/Rectangle\ 23.svg);
-      background-repeat: no-repeat;
       background-size: auto;
    }
 }
