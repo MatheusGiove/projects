@@ -27,6 +27,7 @@
 
 .item-menu:hover {
    color: #B98EFF;
+   font-size: 1rem;
 }
 
 @media (max-width: 1000px) {
@@ -38,5 +39,10 @@
    
    .item-menu {
       background-color: var(--cor2);
+   }
+
+   .item-menu:not(:hover) {
+      color: inherit;
+      font-size: inherit;
    }
 }
