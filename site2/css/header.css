@@ -40,10 +40,11 @@
    .header-content {
       flex-direction: column;
       gap: 1.25rem;
-      padding: 1.25rem 5vw;
+      padding: 1.25rem;
    }
    
    .item-menu {
       background-color: var(--cor2);
+      border: 1px solid var(--cor3);
    }
 }
