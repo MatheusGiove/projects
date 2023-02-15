@@ -11,13 +11,14 @@
   max-width: 1366px;
   margin: auto;
   padding: 2.5rem 1.25rem;
-  gap: 2.5rem;
+  gap: 4rem;
 }
 
 .nome {
   display: grid;
   align-content: center;
   justify-content: left;
+  line-height: 1.125;
 }
 
 .nome h1 {
@@ -49,7 +50,6 @@
 .foto {
   display: grid;
   place-self: center end;
-  position: relative;
   width: 100%;
 }
 
@@ -76,7 +76,7 @@
     margin: 0rem;
   }
 
-  .foto {
+  .foto-perfil{
     width: 75%;
     display: block;
     place-self: center;
