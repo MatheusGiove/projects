@@ -8,6 +8,7 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   max-width: 1366px;
+  padding: 5.5rem 1.25rem;
 }
 
 .formacao > h1 {

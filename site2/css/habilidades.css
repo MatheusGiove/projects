@@ -1,6 +1,6 @@
 .habilidades {
-  background: linear-gradient(0deg, var(--cor3), #343434, var(--cor4));
-  padding: 3.5rem 1.25rem;  
+  background: linear-gradient(0deg, var(--cor3), var(--cor4));
+  padding: 5.5rem 1.25rem;  
 }
 .grid-habilidades {
   display: grid;
