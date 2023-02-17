@@ -1,6 +1,6 @@
 .principal {
   display: grid;
-  background-image: url(../img/onda.svg);
+  /* background-image: url(../img/onda.svg); */
   background-repeat: repeat;
   height: 100vh;
 }

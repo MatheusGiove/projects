@@ -1,0 +1,39 @@
+.habilidades {
+  background: linear-gradient(0deg, var(--cor3), #343434, var(--cor4));
+  padding: 3.5rem 1.25rem;  
+}
+.grid-habilidades {
+  display: grid;
+  gap: 4rem;
+}
+
+.habilidades h1 {
+  display: grid;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.habilidades-fotos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 200px));
+  width: 100%;
+  gap: 5rem;
+  justify-content: center;
+}
+
+@media (max-width: 510px) {
+  .grid-habilidades {
+    gap: 2rem;
+  }
+  
+  .habilidades-fotos {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 100px));
+    gap: 2rem;
+  }
+
+  .habilidades h1 {
+    font-size: 1.5rem;
+  }
+}

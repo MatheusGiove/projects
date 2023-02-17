@@ -1,0 +1,19 @@
+.formacao-sessao {
+  background-color: var(--cor3);
+  height: 105vh;
+  color: var(--cor4);
+}
+
+.formacao {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  max-width: 1366px;
+}
+
+.formacao > h1 {
+  font-size: 8rem;
+  text-align: left;
+  text-transform: uppercase;
+  word-break: break-all;
+  color: black;
+}
