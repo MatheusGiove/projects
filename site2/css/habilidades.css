@@ -1,9 +1,10 @@
 .habilidades {
   background: linear-gradient(0deg, var(--cor3), var(--cor4));
-  padding: 5.5rem 1.25rem;  
+  padding: 5.5rem 1.25rem;
+  height: 70vh;
 }
 .grid-habilidades {
-  display: grid;
+  display: grid;  
   gap: 4rem;
 }
 
