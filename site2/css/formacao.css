@@ -1,7 +1,6 @@
 .formacao-sessao {
   background-color: var(--cor3);
-  height: 105vh;
-  color: var(--cor4);
+  color: #8f8f8f;
 }
 
 .formacao {
@@ -9,6 +8,8 @@
   grid-template-columns: 1fr 2fr;
   max-width: 1366px;
   padding: 5.5rem 1.25rem;
+  margin: auto;
+  gap: 6.25rem;
 }
 
 .formacao > h1 {
@@ -17,4 +18,89 @@
   text-transform: uppercase;
   word-break: break-all;
   color: black;
+}
+
+.formacao-blocos {
+  display: grid;
+  gap: 3rem;
+}
+
+.blocos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.bloco {
+  background-color: black;
+  display: grid;
+  padding: 15px;
+  margin: 0px;
+}
+
+.bloco > h1 {
+  font-size: 1.125rem;
+  color: #fff;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.bloco > h2 {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.bloco > h1::before {
+  content: "";
+  width: 5px;
+  height: 30px;
+  top: -4px;
+  left: -20px;
+  background-image: linear-gradient(0deg, var(--cor2), var(--cor0));
+  position: absolute;
+}
+
+.bloco > p {
+  font-size: 1.125rem;
+}
+
+.complementos {
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  font-weight: bolder;
+}
+
+.complementos-bloco {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.lista {
+  list-style-type: none;
+  display: grid;
+  gap: 5px;
+}
+
+.lista > li {
+  color: white;
+}
+
+.lista > span {
+  color: #8f8f8f;
+}
+
+.curso {
+  display: flex;
+  justify-content: space-between;
+}
+
+li .horas,
+.nivel {
+  color: #8f8f8f;
+}
+
+.nivel {
+  color: #8f8f8f;
 }

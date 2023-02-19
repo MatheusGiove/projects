@@ -1,7 +1,6 @@
 .habilidades {
   background: linear-gradient(0deg, var(--cor3), var(--cor4));
   padding: 5.5rem 1.25rem;
-  height: 70vh;
 }
 .grid-habilidades {
   display: grid;  
@@ -14,6 +13,7 @@
   text-transform: uppercase;
   font-size: 3rem;
   font-weight: bold;
+  text-shadow: 1px 1px 3px rgb(0, 0, 0);
 }
 
 .habilidades-fotos {
@@ -22,6 +22,13 @@
   width: 100%;
   gap: 5rem;
   justify-content: center;
+}
+
+.icone-habilidade {
+  padding: 1rem;
+  background-color: #888488;
+  border: 1px solid #585858;
+  border-radius: 15px;
 }
 
 @media (max-width: 510px) {

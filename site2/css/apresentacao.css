@@ -1,8 +1,6 @@
 .principal {
   display: grid;
-  /* background-image: url(../img/onda.svg); */
   background-repeat: repeat;
-  height: 100vh;
 }
 
 .apresentacao {
@@ -21,16 +19,16 @@
   line-height: 1.125;
 }
 
-.nome h1 {
+.nome > h1 {
   font-size: 4.5vw;
 }
 
-.nome h2 {
+.nome > h2 {
   font-size: 2.3vw;
   color: var(--cor2);
 }
 
-.nome h3 {
+.nome > h3 {
   font-size: 1.7vw;
 }
 

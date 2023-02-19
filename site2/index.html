@@ -17,7 +17,7 @@
          <img class="logo-escrito" src="img/logo-escrita.svg" alt="">
          <nav>
             <ul class="header-menu">
-               <li><a class="item-menu" href="">item 1</a></li>
+               <li><a class="item-menu" href="#habilidades">item 1</a></li>
                <li><a class="item-menu" href="#formacao">Formação</a></li>
                <li><a class="item-menu" href="">item 2</a></li>
                <li><a class="item-menu" href="">item 3</a></li>
@@ -31,8 +31,8 @@
       <section class="apresentacao">
          <article class="nome">
             <h3>Olá &#x1F44B, meu nome é</h3>
-            <h1>Matheus Faria Giove</h1>
-            <h2>Desenvolvedor web front-end</h2>
+            <h1><strong>Matheus Faria Giove</strong></h1>
+            <h2><em>Desenvolvedor web front-end</em></h2>
             <div class="social">
                <a href="https://github.com/MatheusGiove"><img class="icone"
                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" /></a>
@@ -47,27 +47,72 @@
 
       </section>
    </main>
-   <article class="habilidades">
+   <article class="habilidades" id="habilidades">
       <div class="grid-habilidades">
          <h1>habilidades</h1>
          <section class="habilidades-fotos">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+
+            <img class="icone-habilidade"
+               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
+            <img class="icone-habilidade"
+               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+            <img class="icone-habilidade"
+               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+
          </section>
       </div>
    </article>
    <article class="formacao-sessao">
       <section id="#formacao" class="formacao" aria-label="Formação">
          <h1>Formação</h1>
-         <div>
-            <p>Minha mais recente e xperiência acadêmica foi o mestrado &#x1F393 que fiz no exterior em UX Design. Além
-               disso me mantenho sempre atualizado com cursos intensivos online.</p>
-            <div class="formacao-bloco">
+         <div class="formacao-blocos">
+            <p class="minha-experiencia">Minha mais recente experiência acadêmica foi o mestrado &#x1F393 que fiz no exterior em UX Design. Além disso me mantenho sempre atualizado com cursos intensivos online.
+            </p>
 
+            <div class="blocos">
+               <div class="bloco">
+                  <h2>Bacharel</h2>
+                  <h1>Administração de Empresas</h1>
+                  <p>UFRRJ</p>
+               </div>
+               <div class="bloco">
+                  <h2>Bacharel</h2>
+                  <h1>Administração de Empresas</h1>
+                  <p>UFRRJ</p>
+               </div>
+               <div class="bloco">
+                  <h2>Bacharel</h2>
+                  <h1>Administração de Empresas</h1>
+                  <p>UFRRJ</p>
+               </div>
             </div>
-            <h2>Cursos realizados</h2>
-            <h2>Idiomas</h2>
+
+            <div class="complementos-bloco">
+               <h3 class="complementos">Cursos realizados</h3>
+               <ul class="lista">
+                  <li class="curso">
+                     UI Design e UX Design 
+                     <span class="horas">56h</span>
+                  </li>
+                  <li class="curso">
+                     Front End para Iniciantes 
+                     <span class="horas">72h</span>
+                  </li>
+               </ul>
+            </div>
+            <div class="complementos-bloco">
+               <h3 class="complementos">Idiomas</h3>
+               <ul class="lista">
+                  <li>
+                     Inglês 
+                     <span class="nivel">/ Intermediário</span>
+                  </li>
+                  <li>
+                     Espanhol 
+                     <span class="nivel">/ Intermediário</span>
+                  </li>
+               </ul>
+            </div>
          </div>
       </section>
    </article>
