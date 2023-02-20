@@ -31,7 +31,7 @@
   border-radius: 15px;
 }
 
-@media (max-width: 510px) {
+@media (max-width: 525px) {
   .grid-habilidades {
     gap: 2rem;
   }
@@ -39,9 +39,5 @@
   .habilidades-fotos {
     grid-template-columns: repeat(auto-fit, minmax(80px, 100px));
     gap: 2rem;
-  }
-
-  .habilidades h1 {
-    font-size: 1.5rem;
   }
 }

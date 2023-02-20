@@ -39,14 +39,16 @@
 
 .blocos {
   display: flex;
+  flex: 1;
   flex-wrap: wrap;
-  justify-content: stretch;
   gap: 1rem;
 }
 
 .bloco {
   background-color: black;
-  display: grid;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   padding: 15px;
   margin: 0px;
 }
@@ -142,4 +144,17 @@ li .horas,
   background-image: url(../img/idiomas.svg);
   background-repeat: no-repeat;
   position: absolute;
+}
+
+@media (max-width: 525px) {
+  .formacao {
+    grid-template-columns: 1fr;
+  }
+
+  .formacao > h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.1);
+    text-align: center;
+  }
 }
