@@ -70,11 +70,20 @@
   text-transform: uppercase;
   letter-spacing: 0.15rem;
   font-weight: bolder;
+  font-size: 0.875rem;
+  text-decoration: underline;
+  line-height: 1.125;
+}
+
+.complementos::before {
+  content: '';
+
 }
 
 .complementos-bloco {
   display: grid;
-  gap: 1.5rem;
+  gap: 2rem;
+  font-size: 1.125rem;
 }
 
 .lista {
