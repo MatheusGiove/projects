@@ -3,6 +3,17 @@
   color: #8f8f8f;
 }
 
+.minha-experiencia {
+  font-size: 1.5rem;
+  max-width: 40ch;
+  line-height: 1.33;
+}
+
+.minha-experiencia > strong {
+  color: #fff;
+  font-weight: bold;
+}
+
 .formacao {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -14,6 +25,7 @@
 
 .formacao > h1 {
   font-size: 8rem;
+  font-weight: bolder;
   text-align: left;
   text-transform: uppercase;
   word-break: break-all;
@@ -28,7 +40,7 @@
 .blocos {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: stretch;
   gap: 1rem;
 }
 
@@ -71,19 +83,14 @@
   letter-spacing: 0.15rem;
   font-weight: bolder;
   font-size: 0.875rem;
-  text-decoration: underline;
   line-height: 1.125;
-}
-
-.complementos::before {
-  content: '';
-
 }
 
 .complementos-bloco {
   display: grid;
   gap: 2rem;
   font-size: 1.125rem;
+  position: relative;
 }
 
 .lista {
@@ -112,4 +119,27 @@ li .horas,
 
 .nivel {
   color: #8f8f8f;
+  font-size: 1.125rem;
+}
+
+.curso-titulo::before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  top: -5px;
+  left: -40px;
+  background-image: url(../img/cursos.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.idioma-titulo::before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  top: -5px;
+  left: -40px;
+  background-image: url(../img/idiomas.svg);
+  background-repeat: no-repeat;
+  position: absolute;
 }
