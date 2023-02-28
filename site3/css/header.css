@@ -1,0 +1,29 @@
+.header-bg {
+  background-color: var(--b);
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.header-menu a {
+  padding: 5px 10px;
+  display: inline-block;
+  color: var(--w);
+  font-family: var(--texto);
+  font-size: 1.125rem;
+}
