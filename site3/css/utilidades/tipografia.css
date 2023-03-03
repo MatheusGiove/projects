@@ -1,0 +1,86 @@
+.f-t {
+  font: 700 4rem/1.125 "Courgette", cursive;
+}
+
+.text-1 {
+  font: 400 1.125rem/1.33 "Roboto", sans-serif;
+}
+
+.text-2 {
+  font: 400 1.5rem/1.33 "Roboto", sans-serif;
+}
+
+.text-2-b {
+  font: 700 1.5rem/1.5 "Roboto", sans-serif;
+}
+
+.text-3-b {
+  font: 700 2rem/1.25 "Roboto", sans-serif;
+}
+
+.text-4-sm {
+  font: 500 1.5/1.33 "Roboto", sans-serif;
+}
+
+.text-sub-p {
+  font: 700 2rem/1.25 "Roboto", sans-serif;
+}
+
+.text-sub-g {
+  font: 700 3rem/1.17 "Roboto", sans-serif;
+}
+
+.text-desc {
+  font: 400 1rem/1.5 "Roboto", sans-serif;
+}
+
+.text-min-sub {
+  font: 700 1.25rem/1.5 "Roboto", sans-serif;
+}
+
+.text-list {
+  font: 500 1.125/1.33 "Roboto", sans-serif;
+}
+
+.f2-sub {
+  font: 400 2rem/1.25 "Pacifico", cursive;
+}
+
+@media (max-width: 1200px) {
+  .f-t {
+    font-size: 3rem;
+  }
+  .text-2 {
+    font-size: 1.25rem;
+  }
+  .f2-sub {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .f-t {
+    font-size: 2.5rem;
+  }
+  .text-sub-p,
+  .f2-sub {
+    font-size: 1.5rem;
+  }
+  .text-1 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .f-t {
+    font-size: 2rem;
+  }
+  .f2-sub,
+  .encomende {
+    font-size: 1.25rem;
+  }
+  .text-2,
+  .text-min-sub {
+    font-size: 1.125rem;
+  }
+}
