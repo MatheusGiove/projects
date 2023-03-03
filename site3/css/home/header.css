@@ -8,10 +8,7 @@
   gap: 20px;
   justify-content: space-between;
   align-items: center;
-  box-sizing: border-box;
   padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .header-menu {
@@ -51,12 +48,12 @@
 
   .header-menu a {
     padding: 10px 20px;
-    background-color: var(--s11);
+    background-color: var(--s10);
     border-radius: 5px;
   }
 
   .header-menu a:hover {
-    background-color: var(--s10);
+    background-color: var(--s9);
     transition: .2s;
   }
 
