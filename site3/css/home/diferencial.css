@@ -101,6 +101,7 @@
   }
   .diferencial-conteudo a {
     margin-bottom: 40px;
+    max-width: 50ch;
   }
   .diferencial-img {
     display: none;
@@ -114,5 +115,8 @@
 @media (max-width: 600px) {
   .diferencial-extra {
     flex-wrap: wrap;
+  }
+  .diferencial-qe > p {
+    max-width: 50ch;
   }
 }
