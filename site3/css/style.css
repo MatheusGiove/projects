@@ -11,6 +11,7 @@
 @import './utilidades/cores.css';
 @import './home/depoimento.css';
 @import './home/ajustes.css';
+@import './home/footer.css';
 
 :root {
   --w: #f7f7f7;
