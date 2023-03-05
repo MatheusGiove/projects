@@ -11,7 +11,7 @@
 }
 
 .ajustes h2 {
-  grid-column: 1/-1;
+  grid-column: 1 / -1;
   margin-bottom: 20px;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .ajuste-item ul {
-  grid-column: 1/-1;
+  grid-column: 1 / -1;
 }
 
 .ajuste-item .servico {

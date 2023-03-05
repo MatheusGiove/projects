@@ -41,7 +41,7 @@
 .footer-contato li:nth-child(even)::after {
   content: '';
   display: block;
-  max-width: 90%;
+  max-width: 360px;
   height: 2px;
   background: var(--s9);
   margin-top: 18px;

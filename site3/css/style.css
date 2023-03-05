@@ -45,7 +45,7 @@
 
 body {
   margin: 0px;
-  padding-bottom: 600px;
+  /* padding-bottom: 600px; */
   background-color: var(--w);
 }
 
