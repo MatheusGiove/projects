@@ -4,6 +4,7 @@
 
 .violinos-bg {
   background-color: var(--s11);
+  padding-bottom: 60px;
 }
 
 .violinos {
@@ -16,16 +17,116 @@
   border-radius: 20px;
 }
 
-.violios-img {
+.violinos-img {
   object-fit: cover;
 }
 
-.violios-img > img {
+.violinos-img > img {
   margin-bottom: 20px;
 }
 
-.violios-mini-pic {
+.violinos-mini-pic {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+}
+
+
+.violinos-conteudo > p {
+  margin-bottom: 24px;
+}
+
+.violinos-conteudo h2 {
+  margin-bottom: 8px;
+}
+
+
+.botao {
+  margin-bottom: 40px;
+}
+
+.violinos-informacoes {
+  padding: 20px 40px;
+  background-color: var(--b);
+  border-radius: 10px;
+  margin-bottom: 32px;
+}
+
+.violinos-informacoes h3 {
+  text-transform: uppercase;
+}
+
+.violinos-informacoes h3 {
+  margin-bottom: 4px;
+}
+
+.violinos-informacoes > p {
+  max-width: 60ch;
+}
+
+.violinos-informacoes > p + div {
+  margin-top: 20px;
+}
+
+.violinos-informacoes-sub {
+  position: relative;
+}
+
+.violinos-informacoes-sub span {
+  position: absolute;
+  left: -20px;
+  top: -3px;
+}
+
+.violinos-ficha {
+  padding: 20px 40px;
+  background-color: var(--b);
+  border-radius: 10px;
+}
+
+.violinos-ficha {
+  text-transform: uppercase;
+}
+
+.violinos-ficha span {
+  text-transform: capitalize;
+}
+
+.violinos-ficha > li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.violinos-ficha > li + li {
+  margin-top: 12px;
+}
+
+.bicicletas-home {
+  padding: 0px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+
+@media (max-width: 800px) {
+  .violinos {
+    grid-template-columns: 1fr;
+  }
+  
+  .violinos-img {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    grid-row: 2;
+  }
+  
+  .violinos-img > img {
+    margin-bottom: initial;
+  }
+}
+
+@media (max-width: 400px) {
+  .titulo {
+    padding-top: 20px;
+  }
 }
