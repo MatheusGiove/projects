@@ -5,7 +5,7 @@
 @import './utilidades/componentes.css';
 @import './home/header.css';
 @import './home/introducao.css';
-@import './bicicletas/bicicletas-lista.css';
+@import './violinos/violinos-lista.css';
 @import './home/diferencial.css';
 @import './utilidades/tipografia.css';
 @import './utilidades/cores.css';
@@ -14,6 +14,7 @@
 @import './home/footer.css';
 @import './pages/termos.css';
 @import './pages/servicos.css';
+@import './violinos/violinos.css';
 
 :root {
   --w: #f7f7f7;

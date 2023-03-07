@@ -1,0 +1,31 @@
+.titulo {
+  padding-bottom: 20px;
+}
+
+.violinos-bg {
+  background-color: var(--s11);
+}
+
+.violinos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.violinos img {
+  border-radius: 20px;
+}
+
+.violios-img {
+  object-fit: cover;
+}
+
+.violios-img > img {
+  margin-bottom: 20px;
+}
+
+.violios-mini-pic {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}

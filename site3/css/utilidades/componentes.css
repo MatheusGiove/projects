@@ -54,6 +54,24 @@
   background-color: var(--s9);
 }
 
+.botao.seta {
+  display: flex;
+  align-items: center;
+}
+
+.botao.seta::after {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 10px;
+  margin-left: 12px;
+  background: url(../../svg/det-arrow.svg);
+  transition: transform .4s;
+}
+
+.botao.seta:hover::after {
+  transform: translateX(4px);
+}
 
 @media (max-width: 600px) {
   .botao {
