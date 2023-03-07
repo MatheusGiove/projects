@@ -87,10 +87,16 @@
   .f-t {
     font-size: 2.5rem;
   }
+  .text-sub-g {
+    font-size: 2rem;
+  }
   .text-sub-p,
   .f2-sub,
   .depo-text {
     font-size: 1.5rem;
+  }
+  .text-2-b {
+    font-size: 1.125rem;
   }
   .text-1,
   .text-list {
@@ -120,7 +126,8 @@
   .text-2 {
     font-size: 1rem;
   }
-  .text-list {
+  .text-list,
+  .text-2-b {
     font-size: .875rem;
   }
 }

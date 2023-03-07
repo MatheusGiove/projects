@@ -12,6 +12,8 @@
 @import './home/depoimento.css';
 @import './home/ajustes.css';
 @import './home/footer.css';
+@import './pages/termos.css';
+@import './pages/servicos.css';
 
 :root {
   --w: #f7f7f7;
@@ -68,8 +70,7 @@ a {
   color: inherit;
 }
 
-img {
+[src$=".jpg"] {
   width: 100%;
   display: block;
 }
-  
