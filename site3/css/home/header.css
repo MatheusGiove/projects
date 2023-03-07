@@ -76,4 +76,8 @@
     display: grid;
     justify-content: center;
   }
+
+  .header a {
+    justify-self: center;
+  }
 }

@@ -75,6 +75,8 @@
   .servicos {
     grid-template-columns: 1fr;
     gap: 16px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 
