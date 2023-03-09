@@ -52,10 +52,15 @@
 .servicos-conteudo ul > li {
   display: flex;
   align-self: center;
-  gap: 8px;
   margin-top: 12px;
 }
 
+.servicos-conteudo ul > li img {
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
 .servicos-conteudo-lista {
   display: grid;
   grid-template-columns: 1fr auto;

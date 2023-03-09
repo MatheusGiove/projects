@@ -13,6 +13,7 @@
 .depoimento-conteudo {
   padding: 40px 40px 80px 80px;
   align-self: end;
+  background: url('../../svg/det-bg-orange-top.svg') no-repeat bottom 40px right 40px;
 }
 
 .depoimento-conteudo p {

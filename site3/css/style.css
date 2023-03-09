@@ -15,6 +15,9 @@
 @import './pages/termos.css';
 @import './pages/servicos.css';
 @import './violinos/violinos.css';
+@import './pages/contatos.css';
+@import './utilidades/formulario.css';
+@import './pages/orcamento.css';
 
 :root {
   --w: #f7f7f7;

@@ -1,5 +1,5 @@
 .introducao-bg {
-  background: var(--s2);
+  background: var(--s2) url('../../svg/det-bg-top-right.svg') no-repeat bottom 160px left 40px;
   color: var(--w);
   box-shadow: inset 0px -120px var(--w);
 }

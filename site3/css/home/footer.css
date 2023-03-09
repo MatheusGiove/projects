@@ -1,5 +1,5 @@
 .footer-bg {
-  background-color: var(--b);
+  background: var(--b) url('../../svg/det-bg-bottom-left.svg') no-repeat top 40px right 40px;
 }
 
 .footer {
@@ -68,7 +68,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 440px) {
   .footer {
   grid-template-columns: 1fr;
   }
@@ -95,7 +95,8 @@
     margin-bottom: 20px;
   }
 
-  .footer-logo {
+  .footer picture {
     margin-bottom: 40px;
+    display: flex;
   }
 }

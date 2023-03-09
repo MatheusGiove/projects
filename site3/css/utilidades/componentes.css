@@ -6,7 +6,7 @@
 }
 
 .titulo-bg {
-  background-color: var(--s11);
+  background: var(--s11) url('../../svg/det-bg-bottom-left.svg') no-repeat bottom 40px right 40px;
 }
 
 .titulo {
@@ -37,6 +37,7 @@
   max-width: max-content;
   background-image: var(--gradient);
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .botao:hover {
@@ -77,5 +78,11 @@
   .botao {
     font-size: .9rem;
     padding: 12px 20px ;
+  }
+}
+
+@media(max-width: 440px) {
+  .titulo-bg {
+    background: var(--s11);
   }
 }

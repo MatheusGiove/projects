@@ -38,6 +38,10 @@
   font: 400 1rem/1.5 "Roboto", sans-serif;
 }
 
+.text-desc-b {
+  font: 700 1rem/1.5 "Roboto", sans-serif;
+}
+
 .text-det {
   font: 400 0.75rem/1.16 "Roboto", sans-serif;
 }

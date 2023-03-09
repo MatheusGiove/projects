@@ -20,6 +20,7 @@
 .diferencial-conteudo {
   padding-top: 180px;
   padding-bottom: 140px;
+  background: url('../../svg/det-bg-bottom-left.svg') no-repeat top 140px right;
 }
 
 .diferencial-conteudo > span {
@@ -85,6 +86,7 @@
   .diferencial-conteudo {
     padding-top: 60px;
     padding-bottom: 60px;
+    background: url('../../svg/det-bg-bottom-left.svg') no-repeat top 40px right 40px;
   }
   .diferencial-bg {
     box-shadow: none;

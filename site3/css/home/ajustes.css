@@ -1,5 +1,5 @@
 .ajustes-bg {
-  background-color: var(--s11);
+  background: var(--s11) url('../../svg/det-bg-top-right.svg') no-repeat bottom 40px left 40px;
 }
 
 .ajustes {
@@ -39,7 +39,6 @@
 
 .ajuste-item span {
   text-align: right;
-  width: max-content;
 }
 
 .ajuste-item  li {
@@ -104,5 +103,6 @@
 
   .ajuste-item span {
     margin-bottom: 16px;
+    text-align: left;
   }
 }
