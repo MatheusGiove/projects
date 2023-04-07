@@ -30,9 +30,3 @@ parametros.forEach(ativarProduto);
 if (window.SimpleAnime) {
   new SimpleAnime();
 }
-
-Soma(a + b)
-Subtração(a - b)
-Multipicacão(a * b)
-Divisão(a / b)
-
