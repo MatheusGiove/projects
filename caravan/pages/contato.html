@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Caravan - Planos</title>
+</head>
+
+<body>
+  <!-- Modal -->
+  <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Entre na Sua Conta </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="loginSenha" class="form-label">Senha</label>
+              <input type="password" class="form-control" id="loginSenha">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="salvarSenha">
+              <label class="form-check-label" for="salvarSenha">Manter-me conectado</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Entrar na Conta</button>
+            <p class="text-muted small m-0 mt-1">Esqueceu sua senha? <a href="#">Clique aqui</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Fim Modal -->
+  <nav class="navbar bg-light navbar-expand-md fixed-top py-3 shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html"><img src="../img/caravan.svg" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Locais
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./local.html">California</a></li>
+              <li><a class="dropdown-item" href="./local.html">Paris</a></li>
+              <li><a class="dropdown-item" href="./local.html">Dublin</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./planos.html">Planos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./contato.html">Contato</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-primary ms-md-2" href="./inscricao.html">Inscreva-se</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section class="container">
+    <div class="py-5 text-center">
+      <span class="h6 d-block">POSSUI ALGUMA DÚVIDA?</span>
+      <h1 class="display-4 text-primary">Fale Conosco</h1>
+    </div>
+    <div class="row">
+      <div class="col-md">
+        <div class="bg-light rounded p-4 shadow-sm">
+          <form>
+            <div class="mb-3">
+              <label for="contatoNome" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="contatoNome" aria-describedby="nomeHelp">
+            </div>
+            <div class="mb-3">
+              <label for="contatoEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="contatoEmail">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+            </div>
+            <a href="#" class="btn btn-primary">Enviar mensagem</a>
+          </form>
+        </div>
+      </div>
+      <div class="col-md mt-5 m-md-0">
+        <h2 class="h6 mb-1">NOSSO ENDEREÇO</h2>
+        <img src="../img/mapa.png" alt="mapa" class="img-fluid rounded">
+        <h2 class="h6 mt-3 mb-1">DADOS DE CONTATO</h2>
+        <ul class="list-unstyled text-secondary">
+          <li>caravan@caravan.com</li>
+          <li>+11 99999-9999</li>
+          <li>De Seg. à Sex. das 10h às 18h</li>
+        </ul>
+        <h2 class="h6 mt-3 mb-1">REDES SOCIAIS</h2>
+        <ul class="list-unstyled">
+          <li><a href="#" class="btn btn-sm btn-outline-secondary d-block mb-2" style="max-width: 240px;">Facebook</a></li>
+          <li><a href="#" class="btn btn-sm btn-outline-secondary d-block mb-2" style="max-width: 240px;">Twitter</a></li>
+          <li><a href="#" class="btn btn-sm btn-outline-secondary d-block" style="max-width: 240px;">Youtube</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="container">
+    <div class="py-5 text-center">
+      <span class="h6 d-block">AINDA ESTÁ COM DÚVIDAS?</span>
+      <h2 class="display-5 text-primary">Perguntas Frenquentes</h2>
+    </div>
+    <div class="row text-center justify-content-center">
+      <div class="col-lg-6">
+        <div class="accordion accordion-flush" id="Perguntas">
+          <div class="accordion-item">
+            <h2 id="flush-headingOne" class="lead text-primary collapsed py-2" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              → É possível cancelar a viagem?
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne"
+              data-bs-parent="#Perguntas">
+              <p class="lead">Sim, porém só é possivel o cancelamento da viagem com pelo menos 48h de antecedência.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 id="flush-headingTwo" class="lead text-primary collapsed py-2" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              → Qual a garantia que tenho se perder o voo?
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+              data-bs-parent="#Perguntas">
+              <p class="lead">Esperamos que isso não aconteca, mas caso ocorra temos diversos meios de ajuda.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 id="flush-headingThree" class="lead text-primary collapsed py-2" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              → Qual a principal forma de viagem?
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+              data-bs-parent="#Perguntas">
+              <p class="lead">A principal forma de viagem que oferecemos é pelo meio aéreo.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 id="flush-headingFour" class="lead text-primary collapsed py-2" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+              → Qual o melhor destino de viagem?
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+              data-bs-parent="#Perguntas">
+              <p class="lead">O melhor destino de viagem e aquele que nosso cliente deseja.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 id="flush-headingFive" class="lead text-primary collapsed py-2" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+              → Vocês dão descontos para grupos grandes?
+            </h2>
+            <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+              data-bs-parent="#Perguntas">
+              <p class="lead">Sim, quanto maior for o grupo de amigos ou familiares maiores são os descontos que
+                oferecemos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <footer class="bg-dark text-white">
+    <div class="container mt-5 py-4">
+      <div class="row">
+        <div class="col-md-3 col-6">
+          <h4 class="h6">PÁGINAS</h4>
+          <ul class="list-unstyled">
+            <li><a href="./planos.html">Planos</a></li>
+            <li><a href="./contato.html">Contato</a></li>
+            <li><a href="./inscricao.html">Inscreva-se</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-6">
+          <h4 class="h6">Locais</h4>
+          <ul class="list-unstyled">
+            <li><a href="./local.html">California</a></li>
+            <li><a href="./local.html">Paris</a></li>
+            <li><a href="./local.html">Dublin</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4 class="h6">DADOS DE CONTATO</h4>
+          <ul class="list-unstyled text-secondary">
+            <li>caravan@caravan.com</li>
+            <li>11 99999-9999</li>
+            <li>De Seg. à Sex. das 10h às 18h</li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h4 class="h6">REDES SOCIAIS</h4>
+          <ul class="list-unstyled">
+            <li><a href="#" class="btn btn-sm d-block btn-outline-secondary mb-2" style="max-width: 110px">Facebook</a>
+            </li>
+            <li><a href="#" class="btn btn-sm d-block btn-outline-secondary mb-2" style="max-width: 110px">Twitter</a>
+            </li>
+            <li><a href="#" class="btn btn-sm d-block btn-outline-secondary mb-2" style="max-width: 110px">Youtube</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="bg-primary text-center">
+      <p class="p-2 m-0">Caravan &copy; 2017. Alguns direitos reservados.</p>
+    </div>
+  </footer>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

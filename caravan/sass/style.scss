@@ -1,0 +1,45 @@
+@mixin d($device) {
+  @if $device == md {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+}
+@include d(md) {
+  .fixed-top {
+    position: relative;
+  }
+}
+
+body {
+  padding-top: 76px;
+  @include d(md) {
+    padding-top: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+#home-quote {
+  background: url(../img/bg-quote.jpg);
+  background-size: cover;
+  @include d(md) {
+    .display-4 {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+.plan-list {
+  li {
+    padding: 14px;
+  }
+  li + li {
+    border-top: 1px solid rgba(0 ,0 ,0, 0.3);
+  }
+}
