@@ -5,10 +5,10 @@ Decidi juntar todos os projetos em um único repositório para melhorar a organi
 Espero que gostem dos projetos!<br>
 E qualquer sugestão de melhoria será muito bem-vinda! 😁</p>
 
-| Projeto    | Link | Repositório próprio |
-| :--------- | :----| :-------------------|
-| `Animais Fantásticos` | [Link do projeto](https://matheusgiove.github.io/projects/animais-fant%C3%A1sticos/)| ❌ NÃO POSSUI ❌
-| `Flex Blog` | [Link do projeto](https://matheusgiove.github.io/projects/flex-blog/)| ❌ NÃO POSSUI ❌ |
-| `Caravan` | [Link do projeto](https://matheusgiove.github.io/projects/caravan/)| ❌ NÃO POSSUI ❌ |
-| `Lutearia` | [Link do projeto](https://matheusgiove.github.io/projects/lutearia/)| ❌ NÃO POSSUI ❌ |
-| `Wildbeast` | [Link do projeto](https://matheusgiove.github.io/projects/wildbeast/)| ❌ NÃO POSSUI ❌ |
+| Projeto    | Site do projeto | Repositório do projeto | Tecnologias / Frameworks utilizados |
+| :--------- | :---------------| :----------------------| :------------------|
+| Lutearia | [Link do Site 🌐](https://matheusgiove.github.io/projects/lutearia/)| [Link do Repositório 📁](https://github.com/MatheusGiove/projects/tree/main/lutearia) | `HTML` `CSS` `JavaScript` |
+| Flex Blog | [Link do Site 🌐](https://matheusgiove.github.io/projects/flex-blog/)| [Link do Repositório 📁](https://github.com/MatheusGiove/projects/tree/main/flex-blog) | `HTML` `CSS` |
+| Caravan | [Link do Site 🌐](https://matheusgiove.github.io/projects/caravan/)| [Link do Repositório 📁](https://github.com/MatheusGiove/projects/tree/main/caravan) | `HTML` `CSS` `Bootstrap` `JavaScript` |
+| Wildbeast | [Link do Site 🌐](https://matheusgiove.github.io/projects/wildbeast/)| [Link do Repositório 📁](https://github.com/MatheusGiove/projects/tree/main/wildbeast) | `HTML` `CSS` |
+| Animais Fantásticos | [Link do Site 🌐](https://matheusgiove.github.io/projects/animais-fant%C3%A1sticos/)| [Link do Repositório 📁](https://github.com/MatheusGiove/projects/tree/main/animais-fant%C3%A1sticos) | `HTML` `CSS` `JavaScript` |
