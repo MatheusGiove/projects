@@ -5,8 +5,8 @@
 
 | Projeto    | Link |   
 | :--------- | :----| 
-| `Lutearia` | [Link do site](https://matheusgiove.github.io/projects/animais-fant%C3%A1sticos/)|
-| `Lutearia` | [Link do site](https://matheusgiove.github.io/projects/flex-blog/)|
-| `Lutearia` | [Link do site](https://matheusgiove.github.io/projects/caravan/)|
+| `Animais Fantásticos` | [Link do site](https://matheusgiove.github.io/projects/animais-fant%C3%A1sticos/)|
+| `Flex Blog` | [Link do site](https://matheusgiove.github.io/projects/flex-blog/)|
+| `Caravan` | [Link do site](https://matheusgiove.github.io/projects/caravan/)|
 | `Lutearia` | [Link do site](https://matheusgiove.github.io/projects/lutearia/)|
-| `Lutearia` | [Link do site](https://matheusgiove.github.io/projects/wildbeast/)|
+| `Wildbeast` | [Link do site](https://matheusgiove.github.io/projects/wildbeast/)|
