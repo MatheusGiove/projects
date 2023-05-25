@@ -10,5 +10,5 @@ E qualquer sugestão de melhoria será muito bem-vinda! 😁</p>
 | Lutearia | [Link do Site 🌐](https://matheusgiove.github.io/projects/lutearia/)| [Link do Repositório 📁](https://github.com/MatheusGiove/projects/tree/main/lutearia) | `HTML` `CSS` `JavaScript` |
 | Flex Blog | [Link do Site 🌐](https://matheusgiove.github.io/projects/flex-blog/)| [Link do Repositório 📁](https://github.com/MatheusGiove/projects/tree/main/flex-blog) | `HTML` `CSS` |
 | Caravan | [Link do Site 🌐](https://matheusgiove.github.io/projects/caravan/)| [Link do Repositório 📁](https://github.com/MatheusGiove/projects/tree/main/caravan) | `HTML` `CSS` `Sass` `Bootstrap` `JavaScript` |
-| Wildbeast | [Link do Site 🌐](https://matheusgiove.github.io/projects/wildbeast/)| [Link do Repositório 📁](https://github.com/MatheusGiove/projects/tree/main/wildbeast) | `HTML` `CSS` |
+<!-- | Wildbeast | [Link do Site 🌐](https://matheusgiove.github.io/projects/wildbeast/)| [Link do Repositório 📁](https://github.com/MatheusGiove/projects/tree/main/wildbeast) | `HTML` `CSS` | -->
 | Animais Fantásticos | [Link do Site 🌐](https://matheusgiove.github.io/projects/animais-fant%C3%A1sticos/)| [Link do Repositório 📁](https://github.com/MatheusGiove/projects/tree/main/animais-fant%C3%A1sticos) | `HTML` `CSS` `Sass` `JavaScript` |
