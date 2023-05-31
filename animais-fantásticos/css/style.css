@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body,
 h1,
 h2,
@@ -24,6 +25,9 @@ body {
   background: #faf6ed;
   color: #222222;
   -webkit-font-smoothing: antialiased;
+}
+
+.grid-container {
   display: grid;
   grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
 }
@@ -74,6 +78,7 @@ body {
   height: 360px;
   overflow-y: scroll;
   grid-column: 2;
+  cursor: pointer;
 }
 .animais-lista::-webkit-scrollbar {
   width: 18px;
@@ -91,6 +96,18 @@ body {
 }
 .animais-descricao section {
   margin-bottom: 3rem;
+}
+.animais-descricao[data-descricao=descricao] > section {
+  display: none;
+}
+.animais-descricao[data-descricao=descricao] > section.ativo {
+  display: block !important;
+}
+.animais-descricao[data-descricao=descricao] > section.ativo.show-right {
+  animation: show-right 0.7s forwards;
+}
+.animais-descricao[data-descricao=descricao] > section.ativo.show-down {
+  animation: show-down 0.7s forwards;
 }
 .animais h2 {
   font-family: monospace;
@@ -123,6 +140,7 @@ body {
   margin: 2rem 0 0.5rem;
   color: #ee5544;
   font-size: 1rem;
+  cursor: pointer;
 }
 .faq-lista dt::before {
   content: "";
@@ -132,9 +150,22 @@ body {
   margin-right: 10px;
   background: #ffbb55;
 }
+.faq-lista dt::after {
+  content: "⮧";
+  display: inline-block;
+  margin-left: 12px;
+}
+.faq-lista dt.ativo::after {
+  content: "⮥" !important;
+}
 .faq-lista dd {
   font-family: Helvetica, Arial, sans-serif;
   margin: 0 30px 0.5rem;
+  display: none;
+}
+.faq-lista dd.ativo {
+  animation: accordion 0.7s forwards;
+  display: block;
 }
 
 .mapa {
@@ -168,8 +199,78 @@ body {
   font-weight: bold;
 }
 
+[data-sessao=sessao] {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: 0.5s;
+}
+[data-sessao=sessao].ativo {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.modal-container {
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.modal-container .modal {
+  padding: 40px;
+  background: #ffffff;
+  min-width: 300px;
+  border: 10px solid #fb5;
+  box-shadow: 0 0 0 10px #ffffff;
+  position: relative;
+  animation: modal 0.5s forwards;
+}
+.modal-container .modal .fechar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  background: #e54;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
+  top: -30px;
+  right: -30px;
+  position: absolute;
+  font-size: 1.2rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+.modal-container .modal input {
+  width: 100%;
+  padding: 12px 8px;
+  box-sizing: border-box;
+}
+.modal-container .modal label {
+  font-family: "IBM Plex Mono", monospace;
+  display: block;
+  font-weight: 700;
+  margin: 16px 0 8px 0;
+}
+.modal-container .modal button[type=submit] {
+  display: block;
+  background: #e54;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 32px;
+  font: 700 1rem/1 "IBM Plex Mono", monospace;
+  color: #ffffff;
+  margin-top: 16px;
+}
+.modal-container.ativo {
+  display: flex;
+}
+
 @media (max-width: 700px) {
-  body {
+  .grid-container {
     grid-template-columns: 1fr;
   }
   .menu,
@@ -197,6 +298,46 @@ body {
   }
   .copy {
     margin-bottom: 0;
+  }
+}
+@keyframes show-right {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes show-down {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes accordion {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 200px;
+  }
+}
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
