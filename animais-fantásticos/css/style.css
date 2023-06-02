@@ -269,6 +269,20 @@ body {
   display: flex;
 }
 
+.tooltip {
+  position: absolute;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 0 2px #fb5, 0 0 0 6px rgba(0, 0, 0, 0.6);
+  padding: 8px;
+  color: white;
+  font: 700 0.875rem/1 "IBM Plex Mono", monospace;
+  max-width: 150px;
+  border-radius: 2px;
+  top: 0;
+  left: 0;
+}
+
 @media (max-width: 700px) {
   .grid-container {
     grid-template-columns: 1fr;
