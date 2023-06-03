@@ -14,7 +14,7 @@ img {
   display: block;
   max-width: 100%;
 }
-ul {
+li {
   list-style: none;
 }
 body {
@@ -35,7 +35,7 @@ body {
     flex-wrap: wrap;
     padding: 10px;
   }
-  li a {
+  li > a {
     display: block;
     padding: 10px;
     margin-right: 10px;
@@ -217,7 +217,7 @@ body {
     border: 10px solid #fb5;
     box-shadow: 0 0 0 10px #ffffff;
     position: relative;
-    animation: modal .5s forwards;
+    animation: modal 0.5s forwards;
     & .fechar {
       width: 50px;
       height: 50px;
@@ -238,7 +238,7 @@ body {
       box-sizing: border-box;
     }
     & label {
-      font-family: 'IBM Plex Mono', monospace;
+      font-family: "IBM Plex Mono", monospace;
       display: block;
       font-weight: 700;
       margin: 16px 0 8px 0;
@@ -249,7 +249,7 @@ body {
       border: none;
       border-radius: 4px;
       padding: 12px 32px;
-      font: 700 1rem/1 'IBM Plex Mono', monospace;
+      font: 700 1rem/1 "IBM Plex Mono", monospace;
       color: #ffffff;
       margin-top: 16px;
     }
@@ -265,11 +265,55 @@ body {
   box-shadow: 0 0 0 2px #fb5, 0 0 0 6px rgba(0, 0, 0, 0.6);
   padding: 8px;
   color: white;
-  font: 700 .875rem/1 "IBM Plex Mono", monospace;
+  font: 700 0.875rem/1 "IBM Plex Mono", monospace;
   max-width: 150px;
   border-radius: 2px;
   top: 0;
   left: 0;
+}
+.menu-dropdown {
+  display: block;
+  position: absolute;
+  width: 160px;
+  top: 37px;
+  left: -47.25px;
+  justify-content: center;
+  background: #e54;
+  border: 2px solid #333;
+  box-sizing: border-box;
+  z-index: 5;
+  & li a:hover {
+    color: #faf6ed;
+  }
+  & li a {
+    margin: 0px;
+  }
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 70px;
+    width: 0px;
+    height: 0px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #e54;
+  }
+}
+[data-dropdown] {
+  position: relative;
+  & .menu-dropdown {
+    display: none;
+  }
+  &:hover .menu-dropdown {
+    display: block;
+    animation: show-up .4s forwards;
+  }
+  &.ativo .menu-dropdown {
+    display: block;
+    animation: show-up .4s forwards;
+  }
 }
 
 @media (max-width: 700px) {
@@ -319,6 +363,17 @@ body {
   from {
     opacity: 0;
     transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes show-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
   to {
     opacity: 1;

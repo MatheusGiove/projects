@@ -17,7 +17,7 @@ img {
   max-width: 100%;
 }
 
-ul {
+li {
   list-style: none;
 }
 
@@ -42,7 +42,7 @@ body {
   flex-wrap: wrap;
   padding: 10px;
 }
-.menu li a {
+.menu li > a {
   display: block;
   padding: 10px;
   margin-right: 10px;
@@ -283,6 +283,52 @@ body {
   left: 0;
 }
 
+.menu-dropdown {
+  display: block;
+  position: absolute;
+  width: 160px;
+  top: 37px;
+  left: -47.25px;
+  justify-content: center;
+  background: #e54;
+  border: 2px solid #333;
+  box-sizing: border-box;
+  z-index: 5;
+}
+.menu-dropdown li a:hover {
+  color: #faf6ed;
+}
+.menu-dropdown li a {
+  margin: 0px;
+}
+.menu-dropdown::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: 70px;
+  width: 0px;
+  height: 0px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #e54;
+}
+
+[data-dropdown] {
+  position: relative;
+}
+[data-dropdown] .menu-dropdown {
+  display: none;
+}
+[data-dropdown]:hover .menu-dropdown {
+  display: block;
+  animation: show-up 0.4s forwards;
+}
+[data-dropdown].ativo .menu-dropdown {
+  display: block;
+  animation: show-up 0.4s forwards;
+}
+
 @media (max-width: 700px) {
   .grid-container {
     grid-template-columns: 1fr;
@@ -328,6 +374,16 @@ body {
   from {
     opacity: 0;
     transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes show-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
