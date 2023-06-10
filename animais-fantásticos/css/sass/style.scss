@@ -271,48 +271,103 @@ body {
   top: 0;
   left: 0;
 }
-.menu-dropdown {
-  display: block;
-  position: absolute;
-  width: 160px;
-  top: 37px;
-  left: -47.25px;
-  justify-content: center;
-  background: #e54;
-  border: 2px solid #333;
-  box-sizing: border-box;
-  z-index: 5;
-  & li a:hover {
-    color: #faf6ed;
-  }
-  & li a {
-    margin: 0px;
-  }
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -10px;
-    left: 70px;
-    width: 0px;
-    height: 0px;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid #e54;
-  }
-}
+
 [data-dropdown] {
-  position: relative;
-  & .menu-dropdown {
+  .menu-dropdown {
     display: none;
+    position: absolute;
+    width: 140px;
+    top: 37px;
+    left: -47.25px;
+    justify-content: center;
+    background: #e54;
+    border: 2px solid #333;
+    z-index: 5;
+    & li a:hover {
+      color: #faf6ed;
+    }
+    & li a {
+      margin: 0px;
+    }
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -10px;
+      left: 70px;
+      width: 0px;
+      height: 0px;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #e54;
+    }
+    @media (max-width: 700px) {
+      position: static;
+      border: none;
+      &::before {
+        left: 22px;
+      }
+    }
   }
+  position: relative;
   &:hover .menu-dropdown {
     display: block;
-    animation: show-up .4s forwards;
+    animation: show-up 0.4s forwards;
   }
   &.ativo .menu-dropdown {
-    display: block;
-    animation: show-up .4s forwards;
+    display: block !important;
+    animation: show-up 0.4s forwards;
+  }
+}
+[data-menu="button"] {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .js [data-menu="button"] {
+    display: flex;
+    align-items: center;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 8px 16px;
+    margin: 10px;
+    background: #222222;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 4;
+    &::before {
+      content: "";
+      display: inline-block;
+      height: 2px;
+      width: 12px;
+      margin-right: 4px;
+      background: #ffffff;
+      box-shadow: 0 4px #ffffff, 0 -4px #ffffff;
+      transition: all .3s;
+    }
+    &.ativo {
+      &::before {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  .js [data-menu="list"] {
+    display: none;
+    &.ativo {
+      display: block;
+      position: absolute;
+      padding: 60px 0 20px 0;
+      width: 160px;
+      top: 0;
+      background: #ffbb55;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+      z-index: 3;
+      animation: show-right .3s forwards;
+    }
   }
 }
 

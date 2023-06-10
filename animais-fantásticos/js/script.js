@@ -5,11 +5,13 @@ import navTab from "./modules/navTab.js";
 import modal from "./modules/modal.js";
 import initTooltip from "./modules/tooltip.js";
 import dropdownMenu from "./modules/dropdown-menu.js";
+import menuMobile from "./modules/menuMobile.js";
 
 navTab();
 accordion();
 scrollSuave();
 sessoesAnimacao();
-modal()
-initTooltip()
-dropdownMenu()
+modal();
+initTooltip();
+dropdownMenu();
+menuMobile();

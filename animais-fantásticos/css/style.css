@@ -283,25 +283,27 @@ body {
   left: 0;
 }
 
-.menu-dropdown {
-  display: block;
+[data-dropdown] {
+  position: relative;
+}
+[data-dropdown] .menu-dropdown {
+  display: none;
   position: absolute;
-  width: 160px;
+  width: 140px;
   top: 37px;
   left: -47.25px;
   justify-content: center;
   background: #e54;
   border: 2px solid #333;
-  box-sizing: border-box;
   z-index: 5;
 }
-.menu-dropdown li a:hover {
+[data-dropdown] .menu-dropdown li a:hover {
   color: #faf6ed;
 }
-.menu-dropdown li a {
+[data-dropdown] .menu-dropdown li a {
   margin: 0px;
 }
-.menu-dropdown::before {
+[data-dropdown] .menu-dropdown::before {
   content: "";
   display: block;
   position: absolute;
@@ -313,22 +315,73 @@ body {
   border-right: 10px solid transparent;
   border-bottom: 10px solid #e54;
 }
-
-[data-dropdown] {
-  position: relative;
-}
-[data-dropdown] .menu-dropdown {
-  display: none;
+@media (max-width: 700px) {
+  [data-dropdown] .menu-dropdown {
+    position: static;
+    border: none;
+  }
+  [data-dropdown] .menu-dropdown::before {
+    left: 22px;
+  }
 }
 [data-dropdown]:hover .menu-dropdown {
   display: block;
   animation: show-up 0.4s forwards;
 }
 [data-dropdown].ativo .menu-dropdown {
-  display: block;
+  display: block !important;
   animation: show-up 0.4s forwards;
 }
 
+[data-menu=button] {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .js [data-menu=button] {
+    display: flex;
+    align-items: center;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 8px 16px;
+    margin: 10px;
+    background: #222222;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 4;
+  }
+  .js [data-menu=button]::before {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 12px;
+    margin-right: 4px;
+    background: #ffffff;
+    box-shadow: 0 4px #ffffff, 0 -4px #ffffff;
+    transition: all 0.3s;
+  }
+  .js [data-menu=button].ativo::before {
+    transform: rotate(90deg);
+  }
+  .js [data-menu=list] {
+    display: none;
+  }
+  .js [data-menu=list].ativo {
+    display: block;
+    position: absolute;
+    padding: 60px 0 20px 0;
+    width: 160px;
+    top: 0;
+    background: #ffbb55;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    animation: show-right 0.3s forwards;
+  }
+}
 @media (max-width: 700px) {
   .grid-container {
     grid-template-columns: 1fr;
