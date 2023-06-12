@@ -54,6 +54,9 @@ body {
   font-size: 0.875rem;
   letter-spacing: 0.1em;
 }
+.menu li > a:hover {
+  color: #ffffff;
+}
 
 .grid-section {
   grid-column: 2/4;

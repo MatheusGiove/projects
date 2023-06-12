@@ -46,6 +46,9 @@ body {
     text-transform: uppercase;
     font-size: 0.875rem;
     letter-spacing: 0.1em;
+    &:hover {
+      color: #ffffff;
+    }
   }
 }
 .grid-section {
@@ -271,7 +274,6 @@ body {
   top: 0;
   left: 0;
 }
-
 [data-dropdown] {
   .menu-dropdown {
     display: none;
