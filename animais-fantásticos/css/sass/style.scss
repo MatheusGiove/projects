@@ -421,7 +421,6 @@ body {
     }
   }
 }
-
 @keyframes show-right {
   from {
     opacity: 0;
@@ -432,7 +431,6 @@ body {
     transform: translateX(0);
   }
 }
-
 @keyframes show-down {
   from {
     opacity: 0;
@@ -443,7 +441,6 @@ body {
     transform: translateY(0);
   }
 }
-
 @keyframes show-up {
   from {
     opacity: 0;
@@ -454,7 +451,6 @@ body {
     transform: translateY(0);
   }
 }
-
 @keyframes accordion {
   from {
     opacity: 0;
@@ -465,7 +461,6 @@ body {
     max-height: 200px;
   }
 }
-
 @keyframes modal {
   from {
     opacity: 0;
