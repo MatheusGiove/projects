@@ -358,6 +358,21 @@ body {
   display: none;
 }
 
+[data-semana]::after {
+  content: "";
+  display: inline-block;
+  margin-left: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f33;
+  border: 2px solid #000;
+}
+
+[data-semana].aberto::after {
+  background: #3f3;
+}
+
 @media (max-width: 700px) {
   .grid-container {
     grid-template-columns: 1fr;

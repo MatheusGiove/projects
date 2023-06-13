@@ -7,6 +7,7 @@ import initTooltip from "./modules/tooltip.js";
 import dropdownMenu from "./modules/dropdown-menu.js";
 import menuMobile from "./modules/menuMobile.js";
 import animaNumeros from "./modules/animaNumeros.js";
+import horario from "./modules/horarioAbertura.js";
 
 navTab();
 accordion();
@@ -17,3 +18,4 @@ initTooltip();
 dropdownMenu();
 menuMobile();
 animaNumeros();
+horario();
