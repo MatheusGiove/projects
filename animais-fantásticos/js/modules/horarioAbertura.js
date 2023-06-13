@@ -9,7 +9,6 @@ export default function horarioAbertura() {
   const horarioAberto =
     horarioAtual >= horarioFuncionamento[0] &&
     horarioAtual < horarioFuncionamento[1];
-  console.log(horarioAberto);
   if (diaSemanaAberto && horarioAberto) {
     funcionamento.classList.add("aberto");
   } else {
