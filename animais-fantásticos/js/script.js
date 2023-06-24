@@ -8,6 +8,7 @@ import dropdownMenu from "./modules/dropdown-menu.js";
 import menuMobile from "./modules/menuMobile.js";
 import horario from "./modules/horarioAbertura.js";
 import animais from "./modules/fetchAnimais.js";
+import bitcoin from "./modules/fetchBitcoin.js";
 
 navTab();
 accordion();
@@ -19,3 +20,4 @@ dropdownMenu();
 menuMobile();
 horario();
 animais();
+bitcoin();
