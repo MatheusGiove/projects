@@ -354,7 +354,12 @@ body {
 [data-semana].aberto::after {
   background: #3f3;
 }
-
+.btc-preco {
+  background: #3f3;
+  padding: .2rem .5rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
 
 @media (max-width: 700px) {
   .grid-container {
@@ -435,6 +440,7 @@ body {
     }
   }
 }
+
 @keyframes show-right {
   from {
     opacity: 0;

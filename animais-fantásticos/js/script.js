@@ -6,8 +6,8 @@ import modal from "./modules/modal.js";
 import initTooltip from "./modules/tooltip.js";
 import dropdownMenu from "./modules/dropdown-menu.js";
 import menuMobile from "./modules/menuMobile.js";
-import animaNumeros from "./modules/animaNumeros.js";
 import horario from "./modules/horarioAbertura.js";
+import animais from "./modules/fetchAnimais.js";
 
 navTab();
 accordion();
@@ -17,5 +17,5 @@ modal();
 initTooltip();
 dropdownMenu();
 menuMobile();
-animaNumeros();
 horario();
+animais();
