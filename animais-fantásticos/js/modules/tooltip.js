@@ -1,5 +1,12 @@
 export default function initTooltip() {
   const tooltip = document.querySelectorAll("[data-tooltip]");
+
+  const onMouseMove = {
+    handleEvent({ pageX, pageY }) {
+      this.tooltipbox.style.top = `${pageY + 20}px`;
+      this.tooltipbox.style.left = `${pageX+ 20}px`;
+    },
+  };
   const onMouseOut = {
     handleEvent() {
       this.tooltipbox.remove();
@@ -7,13 +14,17 @@ export default function initTooltip() {
       this.element.removeEventListener("mousemove", onMouseMove);
     },
   };
-  const onMouseMove = {
-    handleEvent(event) {
-      this.tooltipbox.style.top = event.pageY + 20 + "px";
-      this.tooltipbox.style.left = event.pageX + 20 + "px";
-    },
-  };
 
+  function criarTooltip(element) {
+    const tooltipBox = document.createElement("div");
+    const tooltipText = element.getAttribute("aria-label");
+    tooltipBox.classList.add("tooltip");
+    tooltipBox.innerText = tooltipText;
+    document.body.appendChild(tooltipBox);
+    return tooltipBox;
+  }
+
+  
   function onMouseOver() {
     const tooltipBox = criarTooltip(this);
     onMouseMove.tooltipbox = tooltipBox;
@@ -25,13 +36,4 @@ export default function initTooltip() {
   tooltip.forEach((item) => {
     item.addEventListener("mouseover", onMouseOver);
   });
-
-  function criarTooltip(element) {
-    const tooltipBox = document.createElement("div");
-    const tooltipText = element.getAttribute("aria-label");
-    tooltipBox.classList.add("tooltip");
-    tooltipBox.innerText = tooltipText;
-    document.body.appendChild(tooltipBox);
-    return tooltipBox;
-  }
 }

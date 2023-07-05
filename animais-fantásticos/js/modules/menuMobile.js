@@ -4,10 +4,7 @@ export default function menuMobilie() {
   const menuButton = document.querySelector("[data-menu='button']");
   const menuList = document.querySelector("[data-menu='list']");
   const eventos = ["click"];
-  eventos.forEach(evento => {
-    menuButton.addEventListener(evento, openMenu);
-  });
-
+  
   function openMenu() {
     menuList.classList.add("ativo");
     menuButton.classList.add("ativo");
@@ -16,4 +13,8 @@ export default function menuMobilie() {
       menuButton.classList.remove("ativo");
     });
   }
+  
+  eventos.forEach(evento => {
+    menuButton.addEventListener(evento, openMenu);
+  });
 }
