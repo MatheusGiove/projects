@@ -1,23 +1,26 @@
-export default function navTab() {
-  const lista = document.querySelectorAll("[data-lista='lista'] > li");
-  const descricao = document.querySelectorAll(
-    "[data-descricao='descricao'] > section"
-  );
-
-  function ativarTab(index) {
-    descricao.forEach((valor) => {
-      valor.classList.remove("ativo", descricao[index].dataset.anima);
-    });
-    descricao[index].classList.add("ativo", descricao[index].dataset.anima);
+export default class NavTab {
+  constructor(lista, descricao) {
+    this.lista = document.querySelectorAll(lista);
+    this.descricao = document.querySelectorAll(descricao)
   }
 
-  if (lista.length && descricao.length) {
-    descricao[0].classList.add(descricao[0].dataset.anima);
-    descricao[0].classList.add("ativo");
-    lista.forEach((imagem, index) => {
-      imagem.addEventListener("click", () => {
-        ativarTab(index);
-      });
+  ativarTab(index) {
+    this.descricao.forEach((valor) => {
+      valor.classList.remove("ativo", this.descricao[index].dataset.anima);
     });
+    this.descricao[index].classList.add("ativo", this.descricao[index].dataset.anima);
+  }
+
+  listaEvent() {
+    this.lista.forEach((image, index) => {
+      image.addEventListener("click", () => this.ativarTab(index))
+    })
+  }
+
+  init() {
+    if (this.lista.length && this.descricao.length) {
+      this.ativarTab(0)
+      this.listaEvent()
+    }
   }
 }
