@@ -1,4 +1,4 @@
-import scrollSuave from "./modules/scrollSuave.js";
+import ScrollSuave from "./modules/scrollSuave.js";
 import sessoesAnimacao from "./modules/sessoesAnimacao.js";
 import accordion from "./modules/accordion.js";
 import navTab from "./modules/navTab.js";
@@ -10,9 +10,11 @@ import horario from "./modules/horarioAbertura.js";
 import animais from "./modules/fetchAnimais.js";
 import bitcoin from "./modules/fetchBitcoin.js";
 
+const scrollSuave = new ScrollSuave("[data-menu='menu'] a[href^='#']")
+scrollSuave.init()
+
 navTab();
 accordion();
-scrollSuave();
 sessoesAnimacao();
 modal();
 initTooltip();
