@@ -1,15 +1,25 @@
-export default function accordion() {
-  const lista = document.querySelectorAll("[data-accordion='accordion'] dt");
-  const ativo = "ativo";
-  function ativarAccordion() {
-    this.classList.toggle(ativo);
-    this.nextElementSibling.classList.toggle(ativo);
+export default class Accordion {
+  constructor(lista) {
+    this.lista = document.querySelectorAll(lista);
+    this.ativo = "ativo"
   }
-  if (lista.length) {
-    lista[0].classList.add(ativo);
-    lista[0].nextElementSibling.classList.add(ativo);
-    lista.forEach((pergunta) => {
-      pergunta.addEventListener("click", ativarAccordion);
+
+  toggleAccordion(pergunta) {
+    pergunta.classList.toggle(this.ativo);
+    pergunta.nextElementSibling.classList.toggle(this.ativo);
+  }
+
+  listaEvent() {
+    this.lista.forEach((pergunta) => {
+      pergunta.addEventListener("click", () => this.toggleAccordion(pergunta));
     });
+  }
+
+  init() {
+    if (this.lista.length) {
+      this.toggleAccordion(this.lista[0])
+      this.listaEvent();
+    }
+    return this;
   }
 }
