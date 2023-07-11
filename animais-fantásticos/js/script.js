@@ -3,7 +3,7 @@ import sessoesAnimacao from "./modules/sessoesAnimacao.js";
 import Accordion from "./modules/accordion.js";
 import TabNav from "./modules/navTab.js";
 import Modal from './modules/modal.js';
-import initTooltip from "./modules/tooltip.js";
+import Tooltip from "./modules/tooltip.js";
 import dropdownMenu from "./modules/dropdown-menu.js";
 import menuMobile from "./modules/menuMobile.js";
 import horario from "./modules/horarioAbertura.js";
@@ -22,9 +22,10 @@ tabNav.init()
 const modal = new Modal("[data-modal='abrir']", "[data-modal='fechar']", "[data-modal='container']")
 modal.init()
 
+const tooltip = new Tooltip("[data-tooltip]")
+tooltip.init()
 
 sessoesAnimacao();
-initTooltip();
 dropdownMenu();
 menuMobile();
 horario();
