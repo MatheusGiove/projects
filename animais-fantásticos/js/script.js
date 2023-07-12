@@ -7,7 +7,7 @@ import Tooltip from "./modules/tooltip.js";
 import dropdownMenu from "./modules/dropdown-menu.js";
 import menuMobile from "./modules/menuMobile.js";
 import horario from "./modules/horarioAbertura.js";
-import animais from "./modules/fetchAnimais.js";
+import fetchAnimais from "./modules/fetchAnimais.js";
 import bitcoin from "./modules/fetchBitcoin.js";
 
 const scrollSuave = new ScrollSuave("[data-menu='menu'] a[href^='#']");
@@ -29,5 +29,5 @@ sessoesAnimacao();
 dropdownMenu();
 menuMobile();
 horario();
-animais();
+fetchAnimais("./animaisapi.json", ".numeros-grid");
 bitcoin();
