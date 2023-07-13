@@ -18,7 +18,6 @@ export default class ScrollAnima {
   }
 
   checkDistance() {
-    console.log("Ativou")
     this.distance.forEach((section) => {
       if (window.scrollY > section.offsetTop) {
         section.element.classList.add("ativo");
