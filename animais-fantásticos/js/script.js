@@ -1,5 +1,5 @@
 import ScrollSuave from "./modules/scrollSuave.js";
-import sessoesAnimacao from "./modules/sessoesAnimacao.js";
+import ScrollAnima from "./modules/scrollAnima.js";
 import Accordion from "./modules/accordion.js";
 import TabNav from "./modules/navTab.js";
 import Modal from './modules/modal.js';
@@ -25,7 +25,10 @@ modal.init()
 const tooltip = new Tooltip("[data-tooltip]")
 tooltip.init()
 
-sessoesAnimacao();
+const scrollAnima = new ScrollAnima("[data-sessao='sessao']", 0.7);
+console.log(scrollAnima)
+scrollAnima.init()
+
 dropdownMenu();
 menuMobile();
 horario();
