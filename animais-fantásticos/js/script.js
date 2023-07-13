@@ -32,7 +32,6 @@ const dropdownMenu = new DropdownMenu("[data-dropdown]");
 dropdownMenu.init();
 
 const menuMobile = new MenuMobile("[data-menu='button']", "[data-menu='list']");
-console.log(menuMobile)
 menuMobile.init();
 
 horario();
