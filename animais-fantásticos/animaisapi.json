@@ -1,9 +1,5 @@
 [
   {
-    "especie": "Lobos",
-    "total": 4875
-  },
-  {
     "especie": "Raposas",
     "total": 5374
   },
@@ -16,7 +12,15 @@
     "total": 865
   },
   {
-    "especie": "Pandas",
+    "especie": "Lobos",
+    "total": 4875
+  },
+  {
+    "especie": "Macacos",
     "total": 8652
+  },
+  {
+    "especie": "Leões",
+    "total": 274
   }
 ]

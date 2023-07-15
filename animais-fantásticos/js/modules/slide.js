@@ -160,7 +160,7 @@ export default class Slide {
     this.slideEvent();
     this.slideConfig();
     this.transition(true)
-    this.changeSlidePosition(3);
+    this.changeSlidePosition(0);
     this.addEventResize()
     return this;
   }
