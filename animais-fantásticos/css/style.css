@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body,
 h1,
 h2,
@@ -154,12 +153,18 @@ body {
   background: #ffbb55;
 }
 .faq-lista dt::after {
-  content: "⮧";
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: url("../../img/arrow-red.svg") no-repeat center center;
   display: inline-block;
   margin-left: 12px;
+  transform: rotate(90deg);
+  transition: all 0.3s;
 }
 .faq-lista dt.ativo::after {
-  content: "⮥" !important;
+  content: "";
+  transform: rotate(-90deg);
 }
 .faq-lista dd {
   font-family: Helvetica, Arial, sans-serif;
@@ -245,9 +250,11 @@ body {
 .modal-container .modal {
   padding: 40px;
   background: #ffffff;
-  min-width: 300px;
+  width: 80vw;
+  max-width: 600px;
   border: 10px solid #fb5;
   box-shadow: 0 0 0 10px #ffffff;
+  box-sizing: border-box;
   position: relative;
   animation: modal 0.5s forwards;
 }
@@ -256,19 +263,19 @@ body {
   height: 50px;
   border-radius: 50%;
   border: 4px solid #ffffff;
-  background: #e54;
+  background: #e54 url("../../img/fechar.svg") no-repeat center center;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
   top: -30px;
   right: -30px;
   position: absolute;
-  font-size: 1.2rem;
-  color: #ffffff;
   cursor: pointer;
 }
 .modal-container .modal input {
   width: 100%;
   padding: 12px 8px;
   box-sizing: border-box;
+  border: 2px solid #333;
+  border-radius: 0px;
 }
 .modal-container .modal label {
   font-family: "IBM Plex Mono", monospace;
@@ -316,6 +323,7 @@ body {
   justify-content: center;
   background: #e54;
   border: 2px solid #333;
+  animation: show-up 0.3s forwards;
   z-index: 5;
 }
 [data-dropdown] .menu-dropdown li a:hover {
@@ -351,7 +359,6 @@ body {
 }
 [data-dropdown].ativo .menu-dropdown {
   display: block !important;
-  animation: show-up 0.4s forwards;
 }
 
 [data-menu=button] {
@@ -469,6 +476,13 @@ body {
   background-color: #e54;
 }
 
+.arrow-black {
+  display: inline-block;
+  background: url("../../img/arrow-black.svg") no-repeat center center;
+  width: 8px;
+  height: 10px;
+}
+
 @media (max-width: 700px) {
   .grid-container {
     grid-template-columns: 1fr;
@@ -491,7 +505,7 @@ body {
     grid-column: 1/3;
   }
   .grid-section .titulo {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .menu {
     margin-top: 0;
@@ -501,6 +515,9 @@ body {
   }
   .numeros-grid {
     grid-column: 1;
+  }
+  .numeros-grid h3 {
+    font-size: 1.5rem;
   }
   .js [data-menu=button] {
     display: flex;
@@ -544,6 +561,9 @@ body {
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
     z-index: 3;
     animation: show-right 0.3s forwards;
+  }
+  [data-dropdown] .menu-dropdown {
+    display: block;
   }
 }
 @keyframes show-right {
