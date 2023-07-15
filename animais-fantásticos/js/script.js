@@ -7,8 +7,13 @@ import Tooltip from "./modules/tooltip.js";
 import DropdownMenu from "./modules/dropdown-menu.js";
 import MenuMobile from "./modules/menuMobile.js";
 import HorarioAbertura from "./modules/horarioAbertura.js";
+import Slide from "./modules/slide.js";
 import fetchAnimais from "./modules/fetchAnimais.js";
 import fetchBitcoin from "./modules/fetchBitcoin.js";
+
+fetchAnimais("./animaisapi.json", ".numeros-grid");
+
+fetchBitcoin("https://blockchain.info/ticker", ".btc-preco");
 
 const scrollSuave = new ScrollSuave("[data-menu='menu'] a[href^='#']");
 scrollSuave.init();
@@ -26,6 +31,7 @@ const tooltip = new Tooltip("[data-tooltip]")
 tooltip.init()
 
 const scrollAnima = new ScrollAnima("[data-sessao='sessao']", 0.7);
+console.log(scrollAnima)
 scrollAnima.init()
 
 const dropdownMenu = new DropdownMenu("[data-dropdown]");
@@ -37,5 +43,7 @@ menuMobile.init();
 const horarioAbertura = new HorarioAbertura("[data-semana]", "aberto", 3);
 horarioAbertura.init();
 
-fetchAnimais("./animaisapi.json", ".numeros-grid");
-fetchBitcoin("https://blockchain.info/ticker", ".btc-preco");
+const slide = new Slide(".slide", ".slide-wrapper")
+console.log(slide)
+slide.init()
+
