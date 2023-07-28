@@ -23,6 +23,9 @@ module.exports = {
     },
   },
   plugins: ['react-refresh'],
+  globals: {
+    "Promise": "readonly"
+  },
   rules: {
     'react-refresh/only-export-components': 'off',
     'react/react-in-jsx-scope': 'off',
