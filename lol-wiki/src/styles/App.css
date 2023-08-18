@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "Lol-Bold";
+  src: url("../fonts/BeaufortforLOL-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lol-Medium";
+  src: url("../fonts/BeaufortforLOL-MediumItalic.ttf") format("truetype");
+}
+
+body,
+h1,
+p {
+  padding: 0;
+  margin: 0;
+  background-color: #070912;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.App {
+  color: #fff;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  font: italic 6.2rem/1 "Lol-Bold", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.title::before {
+  content: "";
+  display: inline;
+  width: 300px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  bottom: -6px;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.loading > div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 10px solid #fff;
+  border-right-color: transparent;
+  animation: loading infinite 1s linear;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070912;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 10px;
+}

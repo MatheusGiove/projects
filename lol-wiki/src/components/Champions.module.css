@@ -1,0 +1,84 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0 20px;
+  list-style: none;
+  animation: toUp .8s ease-out;
+}
+
+.card {
+  position: relative;
+  cursor: pointer;
+  flex: 1 0 200px;
+  max-width: 220px;
+  font: italic 1.25rem/1 "Lol-Bold", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  overflow: hidden;
+  /* clip-path: polygon(90% 0, 100% 5%, 100% 100%, 0 100%, 0 0); */
+  border: 2px solid #daa520;
+}
+
+.card:hover .title {
+  text-indent: 30px;
+  background: #006680;
+}
+
+.card:hover .image {
+  transform: scale(1.02);
+}
+
+.title {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding: 20px 0;
+  width: 100%;
+  background: #061c25;
+  color: #fff;
+  text-indent: 20px;
+  font-size: 1.5rem;
+  transition: all .6s ease;
+  z-index: 1;
+}
+
+.image {
+  width: 100%;
+  object-fit: cover;
+  transform: scale(1.05);
+  transition: all .6s ease;
+}
+
+.navBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.searchBar {
+  flex: 1;
+  font-size: 2rem;
+  font-family: "Lol-medium", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  height: 60px;
+  background: #eee;
+  margin: 20px 0;
+}
+
+@keyframes toUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
