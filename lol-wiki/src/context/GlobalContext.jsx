@@ -40,7 +40,7 @@ export function GlobalProvider({ children }) {
         try {
           setLoading(true);
           const response = await fetch(
-            `http://ddragon.leagueoflegends.com/cdn/${currentVersion}/data/pt_BR/champion.json`
+            `https://ddragon.leagueoflegends.com/cdn/${currentVersion}/data/pt_BR/champion.json`
           );
           const json = await response.json();
           setChampions(Object.values(json.data));
