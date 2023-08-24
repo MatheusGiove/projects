@@ -18,12 +18,12 @@ const Title = ({ champion, onImageLoad }) => {
           alt={champion.id}
           onLoad={handleImageLoaded}
         />
-      </div>
-      <span className={styles.featureVertical}></span>
-      <span className={styles.featureHorizontal}></span>
-      <div className={styles.group}>
-        <p className={styles.title}>{champion.title}</p>
-        <h1 className={styles.name}>{champion.name}</h1>
+        <span className={styles.featureVertical}></span>
+        <span className={styles.featureHorizontal}></span>
+        <div className={styles.group}>
+          <p className={styles.title}>{champion.title}</p>
+          <h1 className={styles.name}>{champion.name}</h1>
+        </div>
       </div>
     </section>
   );

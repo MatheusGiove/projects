@@ -4,7 +4,7 @@ import styles from "./Lore.module.css";
 export const Lore = ({ champion }) => {
   return (
     <section className={styles.group}>
-      <h1 className={styles.title}>Lore</h1>
+      <h1 className="title">Lore</h1>
       <p className={styles.lore}>{champion.lore}</p>
     </section>
   );

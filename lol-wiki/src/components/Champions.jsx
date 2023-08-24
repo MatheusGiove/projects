@@ -59,6 +59,7 @@ const Champions = () => {
             name="champion"
             id="champion"
             value={search}
+            placeholder="Pesquise um campeão"
             onChange={({ target }) => setSearch(target.value)}
           />
         </form>

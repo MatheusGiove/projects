@@ -12,20 +12,24 @@
 }
 
 .featureVertical {
+  display: block;
   width: 100%;
   height: 100%;
   background: linear-gradient(to top, #070912, transparent 90%);
   position: absolute;
   bottom: 0;
+  z-index: 1;
 }
 
 .featureHorizontal {
+  display: block;
   width: 100%;
   height: 100%;
   background: linear-gradient(to left, #070912, transparent 40%),
     linear-gradient(to right, #070912, transparent 40%);
   position: absolute;
   bottom: 0;
+  z-index: 1;
 }
 
 .group {
@@ -36,6 +40,7 @@
   right: 50%;
   position: absolute;
   transform: translate(50%, 30%);
+  z-index: 2;
 }
 
 .name {
@@ -80,5 +85,50 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@media (max-width: 1620px) {
+  .name {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 1440px) {
+  .name {
+    font-size: 4rem;
+  }
+  .containerImage {
+    height: auto;
+  }
+}
+
+@media (max-width: 1080px) {
+  .name {
+    font-size: 2.5rem;
+  }
+  .title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .name {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .name {
+    font-size: 1.5rem;
+  }
+  .title {
+    font-size: .75rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .name {
+    font-size: 1.25rem;
   }
 }

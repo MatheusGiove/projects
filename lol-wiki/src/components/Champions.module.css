@@ -65,11 +65,13 @@
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
+  border-radius: 5px;
   border: none;
   outline: none;
   height: 60px;
   background: #eee;
   margin: 20px 0;
+  max-width: 600px;
 }
 
 @keyframes toUp {
@@ -80,5 +82,24 @@
   to {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+
+@media (max-width: 1440px) {
+  .title {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .title {
+    font-size: 1rem;
+  }
+  .searchBar {
+    font-size: 1.25rem;
   }
 }

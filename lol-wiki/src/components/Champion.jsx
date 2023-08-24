@@ -5,6 +5,7 @@ import Lore from "./ChampionSections/Lore";
 import Slide from "./ChampionSections/Slide";
 import Title from "./ChampionSections/Title";
 import Head from "../Head";
+import Hability from "./ChampionSections/Hability";
 
 const Champion = () => {
   const { champion } = useParams();
@@ -69,8 +70,9 @@ const Champion = () => {
       <Title champion={currentChampion} onImageLoad={handleTitleImageLoad} />
       {imageLoaded && (
         <>
-          {/* <Lore champion={currentChampion} /> */}
+          <Lore champion={currentChampion} />
           <Slide champion={currentChampion} />
+          <Hability champion={currentChampion} />
         </>
       )}
     </article>
