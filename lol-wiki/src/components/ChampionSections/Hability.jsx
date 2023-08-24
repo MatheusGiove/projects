@@ -21,9 +21,7 @@ const Hability = ({ champion }) => {
   }, [champion]);
 
   const keyBinds = ["Q", "W", "E", "R"];
-
-  console.log(champion);
-
+  
   return (
     <section>
       <h1 className="title">Habilidades</h1>
