@@ -1,5 +1,6 @@
 .container {
   overflow: hidden;
+  animation: toUp 2s ease-out;
 }
 
 .content {
@@ -60,4 +61,15 @@
 
 .nav button.previousButton {
   transform: rotate(180deg);
+}
+
+@keyframes toUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }

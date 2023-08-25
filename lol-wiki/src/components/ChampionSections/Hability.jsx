@@ -23,7 +23,7 @@ const Hability = ({ champion }) => {
   const keyBinds = ["Q", "W", "E", "R"];
   
   return (
-    <section>
+    <section className={styles.grid}>
       <h1 className="title">Habilidades</h1>
       <ul className={styles.grid}>
         {spells && passive && (

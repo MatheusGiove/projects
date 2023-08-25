@@ -9,6 +9,18 @@
   line-height: 1.5;
   color: #fff;
   opacity: .7;
+  animation: toUp 2s ease-out;
+}
+
+@keyframes toUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 @media (max-width: 768px) {
