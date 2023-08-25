@@ -1,3 +1,7 @@
+.group {
+  animation: toUp 2s ease-in-out;
+}
+
 .lore {
   text-transform: none;
   margin: 0 auto;
@@ -9,7 +13,6 @@
   line-height: 1.5;
   color: #fff;
   opacity: .7;
-  animation: toUp 2s ease-out;
 }
 
 @keyframes toUp {
