@@ -1,3 +1,7 @@
+.container {
+  animation: toUp 2s ease-out;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 600px));
@@ -48,6 +52,17 @@
   width: 40px;
 }
 
+@keyframes toUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 @media (max-width: 780px) {
   .grid {
     display: flex;
@@ -56,8 +71,4 @@
   .title {
     font-size: 1.25rem;
   }
-}
-
-@media (max-width: 480px) {
-  
 }
