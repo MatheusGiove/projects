@@ -10,7 +10,7 @@ function App() {
     <GlobalProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/@" element={<Champions />} />
+          <Route path="/" element={<Champions />} />
           <Route path="/champion/:champion" element={<Champion />} />
         </Routes>
       </BrowserRouter>
