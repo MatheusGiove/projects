@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as Enviar } from "../../assets/Enviar.svg";
+import { ReactComponent as Enviar } from "../../assets/enviar.svg";
 import useFetch from "../../hooks/useFetch";
 import { COMMENT_POST } from "../../api";
 import styles from "./PhotoCommentsForm.module.css";
