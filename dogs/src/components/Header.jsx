@@ -5,7 +5,7 @@ import { ReactComponent as Dogs } from "../assets/dogs.svg";
 import { UserContext } from "../UserContext";
 
 const Header = () => {
-  const { data, userLogout } = React.useContext(UserContext);
+  const { data } = React.useContext(UserContext);
   return (
     <header className={styles.header}>
       <nav className="container">
