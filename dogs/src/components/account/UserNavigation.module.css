@@ -1,0 +1,137 @@
+.nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.nav > a,
+.nav > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #eee;
+  border-radius: 0.2rem;
+  border: 1px solid transparent;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.nav > a:hover,
+.nav > a:focus,
+.nav > button:hover,
+.nav > button:focus {
+  background: #fff;
+  box-shadow: 0 0 0 3px #eee;
+  border-color: #333;
+  outline: none;
+}
+
+.nav > a:global(.active) {
+  background: #fff;
+  box-shadow: 0 0 0 3px #fea;
+  border-color: #fb1;
+}
+
+.nav > a:global(.active) > svg > * {
+  fill: #fb1;
+}
+
+.mobileButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0px;
+  background: #eee;
+  border-radius: 0.2rem;
+  border: 1px solid transparent;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.mobileButton::after {
+  content: "";
+  display: block;
+  width: 1.2rem;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  box-shadow: 0 6px currentColor, 0 -6px currentColor;
+  transition: all 0.2s ease;
+}
+
+.mobileButton:hover,
+.mobileButton:focus,
+.mobileButtonActive {
+  background: #fff;
+  box-shadow: 0 0 0 3px #fea;
+  border-color: #fb1;
+  outline: none;
+  color: #fb1;
+}
+
+.mobileButtonActive::after {
+  transform: rotate(90deg);
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  color: currentColor;
+  box-shadow: 0 8px currentColor, 0 -8px currentColor;
+}
+
+.navMobile {
+  display: block;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 0.2rem;
+  transform: translateX(-10px);
+  opacity: 0;
+  transition: .3s;
+  pointer-events: none;
+}
+
+.navMobile > a,
+.navMobile > button {
+  display: flex;
+  align-items: center;
+  background: none;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #eee;
+  padding: 0.5rem 0;
+  cursor: pointer;
+}
+
+.navMobile > a:hover svg > *,
+.navMobile > button:hover svg > * {
+  fill: #fb1;
+}
+
+.navMobile > button {
+  border-bottom: none;
+}
+
+.navMobile svg {
+  margin-right: 0.5rem;
+}
+
+.navMobileActive {
+  transition: all .6s;
+  transform: initial;
+  opacity: 1;
+  z-index: 2;
+  pointer-events: initial;
+}
+
+.navMobileActive > a:hover svg,
+.navMobileActive > button:hover svg {
+  transition: .5s;
+  transform: translateX(-3px);
+}
