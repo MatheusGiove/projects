@@ -41,13 +41,6 @@ export default async function getDatabase(language: string) {
       items: await getFilms<GetFilms>(`movie/top_rated?language=${language}`),
       url: `${Base_URL}movie/top_rated?language=${language}`
     },
-    // Trending
-    {
-      tema: "Trending",
-      title: "Recomendados para você",
-      items: await getFilms<GetFilms>(`discover/movie?&page=1&sort_by=popularity.desc&language=${language}`),
-      url: `${Base_URL}discover/movie?&page=1&sort_by=popularity.desc&language=${language}`
-    }, 
     // Action
     {
       tema: "action",
