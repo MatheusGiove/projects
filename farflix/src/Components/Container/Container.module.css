@@ -1,0 +1,19 @@
+.container {
+  padding: 1rem 2rem;
+  margin-bottom: 2.5rem;
+  overflow: hidden;
+}
+
+.moviesList {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  list-style-type: none;
+}
+
+.movie {
+  object-fit: cover;
+  width: auto;
+  height: 240px;
+}
+
