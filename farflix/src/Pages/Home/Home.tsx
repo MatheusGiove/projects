@@ -1,25 +1,20 @@
-import { useEffect, useState } from "react";
-import getDatabase from "../../Services/Tmdb";
 import Loading from "../../Helper/Loading";
 import Container from "../../Components/Container/Container";
+import Principal from "../../Components/Principal/Principal";
+import useData from "../../Hooks/useData";
 
 const Home = () => {
-  const [data, setData] = useState<Database[] | null>(null);
-
-  useEffect(() => {
-    const data = async () => {
-      const films = await getDatabase("pt-BR");
-      setData(films);
-    };
-    data();
-  }, []);
-
-  console.log(data);
+  const { data } = useData()
 
   if (!data) return <Loading />;
-  return <>{data.map(({items, title, url}) => (
-    <Container data={items} title={title} url={url} />
-  ))}</>;
+  return (
+    <>
+      <Principal />
+      {data.map(({ items, title, url }) => (
+        <Container key={title} data={items} title={title} url={url} />
+      ))}
+    </>
+  );
 };
 
 export default Home;

@@ -6,20 +6,23 @@ import Lista from "./Pages/Home/Lista";
 import { Series } from "./Pages/Home/Series";
 import Filmes from "./Pages/Home/Filmes";
 import Trending from "./Pages/Home/Trending";
+import { DatabaseProvider } from "./Context/DatabaseContext";
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="series" element={<Series />} />
-          <Route path="filmes" element={<Filmes />} />
-          <Route path="trending" element={<Trending />} />
-          <Route path="list" element={<Lista />} />
-        </Routes>
-      </BrowserRouter>
+      <DatabaseProvider>
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="series" element={<Series />} />
+            <Route path="filmes" element={<Filmes />} />
+            <Route path="trending" element={<Trending />} />
+            <Route path="list" element={<Lista />} />
+          </Routes>
+        </BrowserRouter>
+      </DatabaseProvider>
     </>
   );
 }
