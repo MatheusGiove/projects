@@ -1,0 +1,130 @@
+/* Global */
+
+a {
+  font-size: .875rem;
+  text-decoration: none;
+  color: rgba(255, 255, 255, .7);
+}
+
+a:hover {
+  color: rgba(255, 255, 255, .5);
+}
+
+a:global(.active) {
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  height: 68px;
+  padding: 0 2rem;
+  color: #e4e4e4;
+  background: rgba(0, 0, 0, .5);
+  gap: 2.5rem;
+}
+
+.logo > img{
+  display: flex;
+  align-self: center;
+  width: 100px;
+}
+
+/* List */
+
+.nav {
+  position: relative;
+}
+
+.list {
+  display: none;
+  align-items: center;
+  list-style-type: none;
+  gap: 24px;
+  padding: 0;
+}
+
+.list.active {
+  display: flex;
+}
+
+/* Profile */
+
+.profile {
+  display: flex;
+  align-items: center;
+  color: #e4e4e4;
+  gap: 12px;
+}
+
+.searchIcon {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.notificationIcon {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.secundaryNavigation {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profileImage {
+  border-radius: 6px;
+}
+
+.detail {
+  width: 10px;
+  rotate: 90deg;
+}
+
+/* Media Querys */
+
+@media (max-width: 920px) {
+  .header {
+    padding: 0 1.25rem;
+  }
+  .menuButton {
+    display: flex;
+    gap: 8px;
+    background: transparent;
+    padding: 0;
+    border: none;
+    color: #e4e4e4;
+    cursor: pointer;
+  }
+  .menuButton::after {
+    content: ">";
+    display: block;
+  }
+  .list.active {
+    display: grid;
+    gap: 4px;
+    margin: 1rem 0 0;
+    width: 200px;
+    background: #000;
+    opacity: .9;
+    position: absolute;
+    border-radius: 8px;
+    overflow: hidden;
+    transform: translateX(-70px);
+  }
+  .list > a {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+  }
+  .list > a:hover {
+    background: #222;
+  }
+}
