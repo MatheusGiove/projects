@@ -19,11 +19,15 @@ a:global(.active) {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
+  width: calc(100% - 64px);
   height: 68px;
   padding: 0 2rem;
   color: #e4e4e4;
   background: rgba(0, 0, 0, .5);
   gap: 2.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .logo > img{
@@ -87,6 +91,7 @@ a:global(.active) {
 
 @media (max-width: 920px) {
   .header {
+    width: calc(100% - 40px);
     padding: 0 1.25rem;
   }
   .menuButton {
@@ -143,6 +148,7 @@ a:global(.active) {
 
 @media (max-width: 480px) {
   .header {
+    width: calc(100% - 20px);
     padding: 0 10px;
     gap: 20px;
   }
