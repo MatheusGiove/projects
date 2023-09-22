@@ -52,36 +52,36 @@ export default async function getDatabase(language: string) {
     {
       tema: "action",
       title: "Ação",
-      items: await getFilms<GetFilms>(`discover/movie?include_adult=true&language=${language}&page=1&sort_by=popularity.desc&with_networks=28`),
-      url: `${Base_URL}discover/movie?include_adult=true&language=${language}&page=1&sort_by=popularity.desc&with_networks=28`
+      items: await getFilms<GetFilms>(`discover/movie?include_adult=true&language=${language}&page=1&sort_by=popularity.desc&with_genres=28`),
+      url: `${Base_URL}discover/movie?include_adult=true&language=${language}&page=1&sort_by=popularity.desc&with_genres=28`
     },
     // Comedy
     {
       tema: "comedy",
       title: "Comédia",
-      items: await getFilms<GetFilms>(`discover/movie?include_adult=true&language=${language}&page=1&sort_by=popularity.desc&with_networks=35`),
-      url: `${Base_URL}discover/movie?include_adult=true&language=${language}&page=1&sort_by=popularity.desc&with_networks=35`
+      items: await getFilms<GetFilms>(`discover/movie?include_adult=true&language=${language}&page=1&sort_by=popularity.desc&with_genres=35`),
+      url: `${Base_URL}discover/movie?include_adult=true&language=${language}&page=1&sort_by=popularity.desc&with_genres=35`
     },
     // Horror
     {
       tema: "horror",
       title: "Terror",
-      items: await getFilms<GetFilms>(`discover/movie?include_adult=true&language=${language}&page=1&sort_by=popularity.desc&with_networks=27`),
-      url: `${Base_URL}discover/movie?include_adult=true&language=${language}&page=1&sort_by=popularity.desc&with_networks=27`
+      items: await getFilms<GetFilms>(`discover/movie?include_adult=true&language=${language}&page=1&sort_by=popularity.desc&with_genres=27`),
+      url: `${Base_URL}discover/movie?include_adult=true&language=${language}&page=1&sort_by=popularity.desc&with_genres=27`
     },
     // Romance
     {
       tema: "romance",
       title: "Romance",
-      items: await getFilms<GetFilms>(`discover/movie?include_adult=true&language=${language}&page=1&sort_by=popularity.desc&with_networks=10749`),
-      url: `${Base_URL}discover/movie?include_adult=true&language=${language}&page=1&sort_by=popularity.desc&with_networks=10749`
+      items: await getFilms<GetFilms>(`discover/movie?include_adult=true&language=${language}&page=1&sort_by=popularity.desc&with_genres=10749`),
+      url: `${Base_URL}discover/movie?include_adult=true&language=${language}&page=1&sort_by=popularity.desc&with_genres=10749`
     },
     // Documentary
     {
       tema: "documentary",
       title: "Documentário",
-      items: await getFilms<GetFilms>(`discover/movie?include_adult=true&language=${language}&page=1&sort_by=popularity.desc&with_networks=99`),
-      url: `${Base_URL}discover/movie?include_adult=true&language=${language}&page=1&sort_by=popularity.desc&with_networks=99`
+      items: await getFilms<GetFilms>(`discover/movie?include_adult=false&language=${language}&page=1&sort_by=popularity.desc&with_genres=99`),
+      url: `${Base_URL}discover/movie?include_adult=true&language=${language}&page=1&sort_by=popularity.desc&with_genres=99`
     }
   ];
   return database;
