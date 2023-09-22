@@ -5,7 +5,7 @@ import logo from "../../Assets/logo.svg";
 import profileImage from "../../Assets/img/profileImage.png";
 import search from "../../Assets/icons/search.svg";
 import notification from "../../Assets/icons/notification.svg";
-import detail from "../../Assets/icons/profileDetail.svg";
+import arrow from "../../Assets/icons/arrow.svg";
 import useMedia from "../../Hooks/useMedia";
 import Navigation from "./Navigation";
 
@@ -14,8 +14,10 @@ const Header = () => {
   const [match, setMatch] = useState(media);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const menuRef = useRef<HTMLUListElement | null>(null);
+  const [button, setButton] = useState(false);
 
   const toggleMenu = useCallback(() => {
+    setButton((button) => !button);
     setMatch((match) => !match);
   }, []);
 
@@ -28,6 +30,7 @@ const Header = () => {
         !menuRef.current.contains(event.target as Node)
       ) {
         setMatch(false);
+        setButton(false);
       }
     };
     document.addEventListener("click", handleClickOutside);
@@ -47,7 +50,7 @@ const Header = () => {
             <button
               ref={buttonRef}
               onClick={toggleMenu}
-              className={styles.menuButton}
+              className={`${styles.menuButton} ${button ? styles.active : ""}`}
             >
               Navegar
             </button>
@@ -87,7 +90,7 @@ const Header = () => {
             />
           </Link>
           <span>
-            <img className={styles.detail} src={detail} alt="Detail Icon" />
+            <img className={styles.detail} src={arrow} alt="Detail Icon" />
           </span>
         </div>
       </div>

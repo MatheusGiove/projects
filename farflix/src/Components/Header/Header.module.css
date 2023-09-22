@@ -83,11 +83,6 @@ a:global(.active) {
   border-radius: 6px;
 }
 
-.detail {
-  width: 10px;
-  rotate: 90deg;
-}
-
 /* Media Querys */
 
 @media (max-width: 920px) {
@@ -96,6 +91,7 @@ a:global(.active) {
   }
   .menuButton {
     display: flex;
+    align-items: center;
     gap: 8px;
     background: transparent;
     padding: 0;
@@ -104,8 +100,15 @@ a:global(.active) {
     cursor: pointer;
   }
   .menuButton::after {
-    content: ">";
+    content: "";
     display: block;
+    width: 12px;
+    height: 7px;
+    background: url("../../Assets/icons/arrow.svg") center center;
+    transition: .1s ease;
+  }
+  .menuButton.active::after {
+    transform: rotate(180deg);
   }
   .list.active {
     display: grid;
@@ -126,5 +129,21 @@ a:global(.active) {
   }
   .list > a:hover {
     background: #222;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile > a {
+    display: none;
+  }
+  .notificationIcon {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0 10px;
+    gap: 20px;
   }
 }

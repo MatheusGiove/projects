@@ -2,4 +2,6 @@ body {
   padding: 0;
   margin: 0;
   font: 400 1rem/1 "Roboto", sans-serif;
+  background: #141414;
+  color: #fff;
 }
