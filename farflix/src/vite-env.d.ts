@@ -1,7 +1,7 @@
 /// <reference types="vite/client" />
 
-interface ResultsGetFilms {
-  adult: boolean; 
+interface ResultsGetFilmsInterface {
+  adult: boolean;
   backdrop_path: string;
   first_air_date: string;
   genres_ids: Array<number>;
@@ -22,15 +22,19 @@ interface ResultsGetFilms {
   vote_count: number;
 }
 
-interface GetFilms {
+interface GetFilmsInterface {
   page: number;
-  results: ResultsGetFilms[];
+  results: ResultsGetFilmsInterface[];
   total_pages: number;
   total_results: number;
 }
 
-interface Database {
-  items: GetFilms | undefined;
+interface DatabaseInterface {
+  items: {
+    data: GetFilmsInterface | null;
+    loading: boolean;
+    erro: string | null;
+  };
   tema: string;
   title: string;
   url: string;

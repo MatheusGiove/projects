@@ -1,26 +1,23 @@
-import React, { useEffect, useState } from "react";
-import getDatabase from "../Services/Tmdb";
+import React, { useState } from "react";
+import useDatabase from "../Services/Tmdb";
 
-interface DatabaseInterface {
-  data: Database[] | null;
+interface ContextInterface {
+  movies: DatabaseInterface[];
+  language: string;
   setLanguage: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export const Database = React.createContext<DatabaseInterface | null>(null);
+export const Database = React.createContext<ContextInterface | null>(null);
 
 export const DatabaseProvider = ({ children }: React.PropsWithChildren) => {
-  const [data, setData] = useState<Database[] | null>(null);
   const [language, setLanguage] = useState<string>("pt-BR");
+  const movies = useDatabase(language).filter(
+    (movie) => movie.items.data !== null
+  );
 
-  useEffect(() => {
-    const data = async () => {
-      const films = await getDatabase(language);
-      setData(films);
-    };
-    data();
-  }, [language]);
-  
   return (
-    <Database.Provider value={{data, setLanguage}}>{children}</Database.Provider>
+    <Database.Provider value={{ movies, language, setLanguage }}>
+      {children}
+    </Database.Provider>
   );
 };

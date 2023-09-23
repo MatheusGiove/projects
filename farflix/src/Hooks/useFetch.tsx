@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-function useFetch<T>({ url, options }: { url: string; options?: RequestInit }) {
+function useFetch<T>( url: string, options?: RequestInit  | undefined) {
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
   const [erro, setErro] = useState<string | null>(null);
@@ -13,7 +13,6 @@ function useFetch<T>({ url, options }: { url: string; options?: RequestInit }) {
     const { signal } = controller;
     const fetchData = async () => {
       setErro(null);
-      setData(null);
       setLoading(true);
       try {
         const response = await fetch(url, {
