@@ -1,6 +1,6 @@
 import styles from "./Principal.module.css";
 
-const Principal = ({ language }: { language: string }) => {
+const Principal = () => {
   return (
     <section style={{ backgroundImage: "" }}>
       <div className={styles.principal}>Opa</div>

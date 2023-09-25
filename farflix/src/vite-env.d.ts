@@ -30,12 +30,7 @@ interface GetFilmsInterface {
 }
 
 interface DatabaseInterface {
-  items: {
-    data: GetFilmsInterface | null;
-    loading: boolean;
-    erro: string | null;
-  };
+  items: GetFilmsInterface | null;
   tema: string;
   title: string;
-  url: string;
 }

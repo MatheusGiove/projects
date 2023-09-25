@@ -4,15 +4,15 @@ import Principal from "../../Components/Principal/Principal";
 import useData from "../../Hooks/useData";
 
 const Home = () => {
-  const { movies, language } = useData();
-  if (movies.length === 0) return <Loading />;
+  const { movies } = useData();
+  if (!movies) return <Loading />;
   return (
     <>
-      <Principal language={language} />
+      <h1>ola</h1>
+      <Principal />
       {movies.map((movie) => (
-        <Container key={movie.tema} data={movie.items} title={movie.title}/>
+        <Container key={movie.tema} data={movie.items?.results.map(item => item)} title={movie.title}/>
       ))}
-      
     </>
   );
 };
