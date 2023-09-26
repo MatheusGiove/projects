@@ -1,4 +1,123 @@
 section {
-  height: calc(80vh - 68px);
-  padding-top: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 90vh;
+  width: 100vw;
+}
+
+.vertical {
+  height: inherit;
+  width: inherit;
+  background: linear-gradient(to top, #141414 5%, transparent 95%);
+}
+
+.horizontal {
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  padding-bottom: 8.5rem;
+  height: inherit;
+  width: inherit;
+  background: linear-gradient(to right, #141414 30%, transparent 70%);
+}
+
+.title {
+  font: 700 3rem "Roboto", sans-serif;
+}
+
+.content {
+  width: inherit;
+}
+
+.overview {
+  width: 40vw;
+  max-height: 3.6em;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  margin-top: 1.25rem;
+}
+
+.showMore {
+  display: block;
+  margin-top: .25rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Infos */
+
+.subInfos {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  font: 600 1.125rem/1 "Roboto", sans-serif;
+  margin-top: .25rem;
+  list-style-type: none;
+}
+
+.note {
+  color: #44dd66;
+}
+
+/* Buttons */
+
+.buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1.25rem;
+}
+
+.watch,
+.information {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  padding: .5rem 2rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.watch {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+}
+
+.watch:hover {
+  background: #ccc8ca;
+}
+
+.watch::before {
+  content: "";
+  display: flex;
+  width: 24px;
+  height: 24px;
+  background-image: url("../../Assets/icons/play.svg");
+}
+
+.information {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  background: rgba(109, 109, 110, 0.7);
+}
+
+.information:hover {
+  background: rgba(109, 109, 110, 0.4);
+}
+
+.information::before {
+  content: "";
+  display: flex;
+  width: 24px;
+  height: 24px;
+  background-image: url("../../Assets/icons/moreInformation.svg");
 }

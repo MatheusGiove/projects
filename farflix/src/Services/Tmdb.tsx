@@ -92,23 +92,23 @@ export default {
     ];
   },
 
-  useMovieInfo: (id: number | undefined, type: string, language: string) => {
-    let info = {};
+  useMovieInfo: async (id: number | undefined, type: string, language: string) => {
+    let info = null;
     let url = "";
     if (id) {
       switch (type) {
         case "movie":
-          url = `${Base_URL}/movie/${id}?language=${language}`;
+          url = `/movie/${id}?language=${language}`;
           break;
         case "tv":
-          url = `${Base_URL}/movie/${id}?language=${language}`;
+          url = `/tv/${id}?language=${language}`;
           break;
         default:
           url = "";
           break;
       }
     }
-    info = fetchMovies(url);
+    info = await fetchMovies<PrincipalInterface>(url);
     return info;
   },
 };

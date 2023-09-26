@@ -1,5 +1,36 @@
 /// <reference types="vite/client" />
 
+interface PrincipalInterface {
+  adult: boolean;
+  backdrop_path: string;
+  belongs_to_collection: {
+    backdrop_path: string;
+    id: number;
+    name: string;
+    poster_path: string;
+  }
+  genres: {
+    id: number;
+    name: string;
+  }[];
+  status: string;
+  tagline: string;
+  name: string;
+  overview: string;
+  original_language: string;
+  homepage: string;
+  original_title: string;
+  release_date: string;
+  seassons: {
+    name: string;
+    overview: string;
+    seasson_number: number;
+  }
+  first_air_date: string;
+  number_of_seasons: number;
+  vote_average: number
+}
+
 interface ResultsGetFilmsInterface {
   adult: boolean;
   backdrop_path: string;

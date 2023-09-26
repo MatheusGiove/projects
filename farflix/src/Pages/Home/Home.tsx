@@ -8,10 +8,13 @@ const Home = () => {
   if (!movies) return <Loading />;
   return (
     <>
-      <h1>ola</h1>
       <Principal />
       {movies.map((movie) => (
-        <Container key={movie.tema} data={movie.items?.results.map(item => item)} title={movie.title}/>
+        <Container
+          key={movie.tema}
+          data={movie.items?.results.map((item) => item)}
+          title={movie.title}
+        />
       ))}
     </>
   );

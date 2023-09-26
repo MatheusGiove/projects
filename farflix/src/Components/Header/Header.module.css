@@ -24,11 +24,12 @@ a:global(.active) {
   padding: 0 2rem;
   color: #e4e4e4;
   background: linear-gradient(#060606, #141414);
-  /* background: transparent; */
+  background: transparent;
   gap: 2.5rem;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 2;
 }
 
 .logo > img{

@@ -8,8 +8,6 @@ type ContainerProps = {
 };
 
 const Container = ({ data, title }: ContainerProps) => {
-  console.log(data);
-
   if (data)
     return (
       <div className={styles.container}>
