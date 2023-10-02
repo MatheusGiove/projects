@@ -16,7 +16,6 @@ const Principal = () => {
       const chosenMovie = array[randomNumber];
       const LoadDestaque = async () => {
         const movie = await Tmdb.useMovieInfo(chosenMovie.id, "tv", language);
-        console.log(movie);
         setDestaque(movie);
       };
       LoadDestaque();
@@ -29,7 +28,7 @@ const Principal = () => {
         style={{
           backgroundPosition: "top rigth",
           backgroundSize: "cover",
-          backgroundImage: `url("https://image.tmdb.org/t/p/original/${destaque?.backdrop_path}")`,
+          backgroundImage: `url("https://image.tmdb.org/t/p/original/${destaque.backdrop_path}")`,
         }}
       >
         <div className={styles.vertical}>

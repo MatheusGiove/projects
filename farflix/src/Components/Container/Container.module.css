@@ -1,6 +1,5 @@
 .container {
   padding: 1rem 2rem;
-  overflow: hidden;
 }
 
 .container:first-of-type {
@@ -8,16 +7,63 @@
   margin-top: -8.5rem;
 }
 
-.moviesList {
+.list {
   display: flex;
   gap: 1rem;
   padding: 1rem 0;
   list-style-type: none;
+  transition: all 0.2s ease;
+}
+
+.moviesList {
+  position: relative;
+}
+
+.moviesList:hover .navBefore,
+.moviesList:hover .navNext {
+  opacity: 1;
 }
 
 .movie {
   object-fit: cover;
   width: auto;
   height: 240px;
+  transition: all 0.3s;
 }
 
+.movie:hover {
+  transform: scale(1.15);
+}
+
+.navBefore,
+.navNext {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: large;
+  top: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  width: 40px;
+  height: 100%;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+
+.navNext {
+  right: -2rem;
+  border-radius: 4px 4px 4px 4px;
+}
+.navBefore {
+  left: -2rem;
+  border-radius: 0 4px 4px 0;
+}
+
+@media (max-width: 1200px) {
+  .navBefore,
+  .navNext {
+    opacity: 1;
+  }
+}
