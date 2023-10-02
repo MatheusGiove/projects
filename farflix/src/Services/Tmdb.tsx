@@ -30,7 +30,7 @@ export default {
         tema: "originals",
         title: "Originais do Farflix",
         items: await fetchMovies<GetFilmsInterface>(
-          `discover/tv?include_adult=true&language=${language}&page=1&sort_by=popularity.desc&with_networks=213`
+          `discover/tv?include_adult=false&language=${language}&page=1&sort_by=popularity.desc&with_networks=213`
         ),
       },
       // Trending
@@ -54,7 +54,7 @@ export default {
         tema: "action",
         title: "Ação",
         items: await fetchMovies<GetFilmsInterface>(
-          `discover/movie?include_adult=true&language=${language}&page=1&sort_by=popularity.desc&with_genres=28`
+          `discover/movie?include_adult=false&language=${language}&page=1&sort_by=popularity.desc&with_genres=28`
         ),
       },
       // Comedy
@@ -62,7 +62,7 @@ export default {
         tema: "comedy",
         title: "Comédia",
         items: await fetchMovies<GetFilmsInterface>(
-          `discover/movie?include_adult=true&language=${language}&page=1&sort_by=popularity.desc&with_genres=35`
+          `discover/movie?include_adult=false&language=${language}&page=1&sort_by=popularity.desc&with_genres=35`
         ),
       },
       // Horror
@@ -70,7 +70,7 @@ export default {
         tema: "horror",
         title: "Terror",
         items: await fetchMovies<GetFilmsInterface>(
-          `discover/movie?include_adult=true&language=${language}&page=1&sort_by=popularity.desc&with_genres=27`
+          `discover/movie?include_adult=false&language=${language}&page=1&sort_by=popularity.desc&with_genres=27`
         ),
       },
       // Romance
@@ -78,7 +78,7 @@ export default {
         tema: "romance",
         title: "Romance",
         items: await fetchMovies<GetFilmsInterface>(
-          `discover/movie?include_adult=true&language=${language}&page=1&sort_by=popularity.desc&with_genres=10749`
+          `discover/movie?include_adult=false&language=${language}&page=1&sort_by=popularity.desc&with_genres=10749`
         ),
       },
       // Documentary
