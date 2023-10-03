@@ -15,6 +15,7 @@ const Header = () => {
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const menuRef = useRef<HTMLUListElement | null>(null);
   const [button, setButton] = useState(false);
+  const [scroll, setScroll] = useState(false);
 
   const toggleMenu = useCallback(() => {
     setButton((button) => !button);
@@ -33,14 +34,28 @@ const Header = () => {
         setButton(false);
       }
     };
+    const handleScroll = () => {
+      if (window.scrollY > 60) setScroll(true);
+      else setScroll(false);
+    };
+
     document.addEventListener("click", handleClickOutside);
+    window.addEventListener("scroll", handleScroll);
     return () => {
       document.removeEventListener("click", handleClickOutside);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
-    <header className={styles.header}>
+    <header
+      className={styles.header}
+      style={{
+        background: scroll
+          ? "linear-gradient(#060606, #141414)"
+          : "transparent",
+      }}
+    >
       <Link to="/" className={styles.logo}>
         <img src={logo} alt="Logo" />
       </Link>

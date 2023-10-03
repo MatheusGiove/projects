@@ -23,13 +23,11 @@ a:global(.active) {
   height: 68px;
   padding: 0 2rem;
   color: #e4e4e4;
-  background: linear-gradient(#060606, #141414);
-  background: transparent;
   gap: 2.5rem;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 9;
 }
 
 .logo > img{
