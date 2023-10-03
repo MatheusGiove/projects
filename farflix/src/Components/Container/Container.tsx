@@ -10,7 +10,7 @@ type ContainerProps = {
 };
 
 const Container = ({ data, title }: ContainerProps) => {
-  const tamanho = Math.round(window.innerWidth / 2);
+  const tamanho = Math.round(window.innerWidth / 2.5);
   const lista = useRef<HTMLLIElement | null>(null);
   const [totalWidth, setTotalWidth] = useState(0);
   const [margin, setMargin] = useState(0);
