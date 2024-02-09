@@ -9,7 +9,7 @@ import Hability from "./ChampionSections/Hability";
 
 const Champion = () => {
   const { champion } = useParams();
-  const { loading, setLoading, error, setError } =
+  const { loading, setLoading, error, setError, currentVersion } =
     React.useContext(GlobalContext);
   const [currentChampion, setCurrentChampion] = React.useState(null);
   const [imageLoaded, setImageLoaded] = React.useState(false);
@@ -31,9 +31,9 @@ const Champion = () => {
       }
     }
     fetchChampion(
-      `https://ddragon.leagueoflegends.com/cdn/13.14.1/data/pt_BR/champion/${champion}.json`
+      `https://ddragon.leagueoflegends.com/cdn/${currentVersion}/data/pt_BR/champion/${champion}.json`
     );
-  }, [champion, setLoading, setError]);
+  }, [champion, setLoading, setError, currentVersion]);
 
   function handleTitleImageLoad() {
     setImageLoaded(true);
